@@ -1,0 +1,29 @@
+{
+  "run": {
+    "evaluator_id": "GN",
+    "scenario_id": "S1",
+    "platform_name": "ChatGPT",
+    "platform_type": "web",
+    "date": "2026-11-02",
+    "product_version": "",
+    "account_state": "logged_in",
+    "interface_language": "en",
+    "notes": ""
+  },
+  "steps": [
+    {
+      "step_id": "S1-A05",
+      "screenshot": "../screenshots/s1/chatgpt-web/01-open.png",
+      "problems": [
+        {
+          "what_happened": "EXAMPLE: the field shows a template but nothing says it will be inserted",
+          "severity": 2,
+          "guidelines": ["G1"],
+          "evidence": "../screenshots/s1/chatgpt-web/01-open.png",
+          "notes": "example row, replace or delete"
+        }
+      ],
+      "notes": ""
+    }
+  ]
+}
