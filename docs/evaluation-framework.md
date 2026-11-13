@@ -4,6 +4,7 @@ Guidelines selected:
 G1, G2, G3, G4, G12, G13, G14, G16, G17.
 
 |Guideline |	Guideline Name |	Why it may be relevant|
+|---|---|---|
 |G1 |	Make clear what the system can do |	Do prompt suggestions communicate the kinds of tasks users can perform with the chatbot?|
 |G2	|Make clear how well the system can do what it can do|	Do suggestions set realistic expectations about the chatbot’s capabilities?|
 |G3 |	Time services based on context	||Do suggestions appear at an appropriate moment, such as when the user first opens a chat or after receiving an answer?|
@@ -19,6 +20,7 @@ G1, G2, G3, G4, G12, G13, G14, G16, G17.
 A four-point severity rating scale (0–3) will be used to classify usability problems identified during the cognitive walkthrough. The scale assesses the potential impact of each identified problem on the user's ability to initiate, continue and complete the intended task.
 
 |RATING|	SEVERITY|	DESCRIPTION|
+|---|---|---|
 |0|	No problem|	No identifiable usability problem is present.|
 |1|	Minor|	A small inconvenience that causes minimal additional effort and does not significantly interrupt the interaction.|
 |2|	Moderate|	A problem that causes confusion, additional effort or interruption, but allows the user to continue through an alternative action.|
@@ -28,7 +30,9 @@ A four-point severity rating scale (0–3) will be used to classify usability pr
 ## 3. Cognitive Walkthrough Evaluation Sheet
 
 Section A: Evaluation Information
+
 |Field	|Details|
+|---|---|---|
 |Product|	Chat gpt|
 |Platform	|Web / Mobile|
 |Evaluator|	|
@@ -38,12 +42,13 @@ Section A: Evaluation Information
 
 Section B: Action-by-Action Walkthrough
 |Evaluation criteria|	Step 1|	Step 2|	Step 3|	Step 4|
-|User action|				
+|---|---|---|
+|User action|				|
 |Q1: Does the user know what to do?|	Yes / No / Uncertain	|Yes / No / Uncertain|	Yes / No / Uncertain|	Yes / No / Uncertain|
 |Q2: Can the user identify the correct action|	Yes / No / Uncertain|	Yes / No / Uncertain|	Yes / No / Uncertain|	Yes / No / Uncertain|
 |Q3: Can the user understand how the action helps achieve the goal?|	Yes / No / Uncertain|	Yes / No / Uncertain	|Yes / No / Uncertain	|Yes / No / Uncertain|
 |Q4: Is the system feedback understandable	|Yes / No / Uncertain	|Yes / No / Uncertain	|Yes / No / Uncertain	|Yes / No / Uncertain|
-|Predicted problem	|		
+|Predicted problem	|		|
 
 
 Section C: Usability Problem Log
