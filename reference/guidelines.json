@@ -1,0 +1,19 @@
+{
+  "guidelines": [
+    { "id": "G1", "name": "Make clear what the system can do", "question": "Do prompt suggestions communicate the kinds of tasks users can perform with the chatbot?" },
+    { "id": "G2", "name": "Make clear how well the system can do what it can do", "question": "Do suggestions set realistic expectations about the chatbot's capabilities?" },
+    { "id": "G3", "name": "Time services based on context", "question": "Do suggestions appear at an appropriate moment, such as when the user first opens a chat or after receiving an answer?" },
+    { "id": "G4", "name": "Show contextually relevant information", "question": "Are suggested prompts relevant to the user's current context, task or conversation?" },
+    { "id": "G12", "name": "Remember recent interactions", "question": "Does the system make appropriate use of recent interactions when presenting suggestions?" },
+    { "id": "G13", "name": "Learn from user behaviour", "question": "Do suggestions adapt to the user's interaction patterns and preferences?" },
+    { "id": "G14", "name": "Update and adapt cautiously", "question": "Does the system avoid making unexpected or disruptive changes to suggestions based on inferred user preferences?" },
+    { "id": "G16", "name": "Convey consequences of the user actions", "question": "Is it clear what happens when a user selects a suggestion, edits it, dismisses it or follows a suggested action?" },
+    { "id": "G17", "name": "Provide global controls", "question": "Can users manage or disable relevant suggestion or personalization features through broader controls?" }
+  ],
+  "severity": [
+    { "level": 0, "label": "No problem", "description": "No identifiable usability problem is present." },
+    { "level": 1, "label": "Minor", "description": "A small inconvenience that causes minimal additional effort and does not significantly interrupt the interaction." },
+    { "level": 2, "label": "Moderate", "description": "A problem that causes confusion, additional effort or interruption, but allows the user to continue through an alternative action." },
+    { "level": 3, "label": "Major", "description": "A problem that significantly obstructs task progression, prevents task completion or leads the user towards an unintended action without a clear recovery path." }
+  ]
+}

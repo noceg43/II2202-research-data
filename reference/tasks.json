@@ -1,0 +1,87 @@
+{
+  "source": "docs/task-analysis.md",
+  "scenarios": [
+    {
+      "id": "S1",
+      "name": "Write a professional email",
+      "goal": "Kim asks a course administrator for a three-day extension, from an empty chat.",
+      "task_end": "A draft that can be sent with light editing.",
+      "steps": [
+        {"id": "S1-A01", "step": "Read the empty-state area", "when": "always", "component": "empty-state area", "expected_feedback": "Greeting, composer and any affordance visible without scrolling"},
+        {"id": "S1-A02", "step": "Read the text of each displayed example", "when": "if examples exist", "component": "prompt suggestions", "expected_feedback": "The example text is readable in place"},
+        {"id": "S1-A03", "step": "Compare the examples with the email task", "when": "after A02", "component": "prompt suggestions", "expected_feedback": "Examples are distinguishable by the task they suggest"},
+        {"id": "S1-A04", "step": "Select the matching example", "when": "if A03 = match", "component": "prompt suggestions", "expected_feedback": "The selection is visibly marked, or the text moves into the field"},
+        {"id": "S1-A05", "step": "Compose the request (recipient, deadline, reason, tone)", "when": "if A03 = no match", "component": "input field", "expected_feedback": "The typed text appears in the field"},
+        {"id": "S1-A06", "step": "Edit the selected example", "when": "if A04 ran and wording is close", "component": "input field", "expected_feedback": "The edited text replaces the example in the field"},
+        {"id": "S1-A07", "step": "Send", "when": "after A04, A05, A06 or A14", "component": "send control", "expected_feedback": "The message leaves the field and a pending state appears"},
+        {"id": "S1-A08", "step": "Check that the text appears as the user's message", "when": "after A07", "component": "user message bubble", "expected_feedback": "The submitted text is visible as the user's message"},
+        {"id": "S1-A09", "step": "Check that a response started", "when": "after A08", "component": "response card", "expected_feedback": "A placeholder, a streaming answer or the first lines appear"},
+        {"id": "S1-A10", "step": "Read the response", "when": "after A09", "component": "response card", "expected_feedback": "The full response is readable"},
+        {"id": "S1-A11", "step": "Judge whether it is usable", "when": "after A10", "component": "response card", "expected_feedback": "No system feedback; the judgement is internal"},
+        {"id": "S1-A12", "step": "Select a capability entry that matches the task", "when": "if capability entries exist", "component": "capability menu", "expected_feedback": "The entry is visibly selected and a submenu appears"},
+        {"id": "S1-A13", "step": "Select an entry in the capability submenu", "when": "after A12", "component": "capability submenu", "expected_feedback": "The entry is marked and its template appears in the field"},
+        {"id": "S1-A14", "step": "Add own content to the injected template", "when": "after A13", "component": "input field", "expected_feedback": "Template plus added text visible in the field"}
+      ],
+      "paths": [
+        {"id": "S1-P1", "label": "example used", "steps": ["S1-A01", "S1-A02", "S1-A03", "S1-A04", "S1-A07", "S1-A08", "S1-A09", "S1-A10", "S1-A11"]},
+        {"id": "S1-P1e", "label": "example edited", "steps": ["S1-A01", "S1-A02", "S1-A03", "S1-A04", "S1-A06", "S1-A07", "S1-A08", "S1-A09", "S1-A10", "S1-A11"]},
+        {"id": "S1-P2", "label": "written from scratch", "steps": ["S1-A01", "S1-A02", "S1-A03", "S1-A05", "S1-A07", "S1-A08", "S1-A09", "S1-A10", "S1-A11"]},
+        {"id": "S1-P3", "label": "capability template", "steps": ["S1-A01", "S1-A12", "S1-A13", "S1-A14", "S1-A07", "S1-A08", "S1-A09", "S1-A10", "S1-A11"]}
+      ]
+    },
+    {
+      "id": "S2",
+      "name": "Summarise a document",
+      "goal": "Kim has the KTH syllabus PDF for a course and wants to know what is required to pass, how it is graded, and whether the document states any deadlines or exam dates.",
+      "task_end": "A summary covering requirements and grading, or a clear statement that the document does not say.",
+      "steps": [
+        {"id": "S2-A01", "step": "Read the empty-state area", "when": "always", "component": "empty-state area", "expected_feedback": "Greeting, composer and any affordance visible without scrolling"},
+        {"id": "S2-A02", "step": "Read the text of each displayed example", "when": "if examples exist", "component": "prompt suggestions", "expected_feedback": "The example text is readable in place"},
+        {"id": "S2-A03", "step": "Judge whether an example implies a document", "when": "after A02", "component": "prompt suggestions", "expected_feedback": "Examples are distinguishable by the task they suggest"},
+        {"id": "S2-A04", "step": "Open the attachment affordance", "when": "before or after composing", "component": "attachment control", "expected_feedback": "A menu or picker opens with a file option"},
+        {"id": "S2-A05", "step": "Select the document from the device", "when": "after A04", "component": "file picker", "expected_feedback": "The device picker opens and accepts the file"},
+        {"id": "S2-A06", "step": "Check that the file is attached", "when": "after A05", "component": "attachment indicator", "expected_feedback": "The file name is shown as attached"},
+        {"id": "S2-A07", "step": "Compose an instruction naming the document and the focus", "when": "if A03 = no match", "component": "input field", "expected_feedback": "The typed text appears in the field"},
+        {"id": "S2-A08", "step": "Select the example that presumes a document", "when": "if A03 = match", "component": "prompt suggestions", "expected_feedback": "The example is placed in the field or sent"},
+        {"id": "S2-A09", "step": "Send", "when": "after A06 and A07 or A08", "component": "send control", "expected_feedback": "The message leaves the field and a pending state appears"},
+        {"id": "S2-A10", "step": "Check the instruction as the user's message", "when": "after A09", "component": "user message bubble", "expected_feedback": "The instruction is visible as the user's message"},
+        {"id": "S2-A11", "step": "Check that a response started", "when": "after A10", "component": "response card", "expected_feedback": "A placeholder, a streaming answer or the first lines appear"},
+        {"id": "S2-A12", "step": "Read the summary", "when": "after A11", "component": "response card", "expected_feedback": "The full summary is readable"},
+        {"id": "S2-A13", "step": "Check the summary against the document: requirements, grading, dates", "when": "after A12", "component": "response card", "expected_feedback": "The content needed for the comparison is visible"},
+        {"id": "S2-A14", "step": "Judge whether it is usable", "when": "after A13", "component": "response card", "expected_feedback": "No system feedback; the judgement is internal"},
+        {"id": "S2-A15", "step": "Check that the attachment is shown as attached in the conversation", "when": "after A10", "component": "attachment card", "expected_feedback": "The file is visibly attached in the conversation"}
+      ],
+      "paths": [
+        {"id": "S2-P1", "label": "example first", "steps": ["S2-A01", "S2-A02", "S2-A03", "S2-A08", "S2-A04", "S2-A05", "S2-A06", "S2-A09", "S2-A10", "S2-A15", "S2-A11", "S2-A12", "S2-A13", "S2-A14"]},
+        {"id": "S2-P2", "label": "prompt first", "steps": ["S2-A01", "S2-A02", "S2-A03", "S2-A07", "S2-A04", "S2-A05", "S2-A06", "S2-A09", "S2-A10", "S2-A15", "S2-A11", "S2-A12", "S2-A13", "S2-A14"]},
+        {"id": "S2-P3", "label": "attach first", "steps": ["S2-A01", "S2-A02", "S2-A03", "S2-A04", "S2-A05", "S2-A06", "S2-A07", "S2-A09", "S2-A10", "S2-A15", "S2-A11", "S2-A12", "S2-A13", "S2-A14"]}
+      ]
+    },
+    {
+      "id": "S3",
+      "name": "Plan a weekend trip",
+      "goal": "Kim wants a two-day plan with a budget and an interest in walking.",
+      "task_end": "A plan covering both days and the constraints, after one refinement turn.",
+      "steps": [
+        {"id": "S3-A01", "step": "Read the empty-state area", "when": "always", "component": "empty-state area", "expected_feedback": "Greeting, composer and any affordance visible without scrolling"},
+        {"id": "S3-A02", "step": "Read the text of each displayed example", "when": "if examples exist", "component": "prompt suggestions", "expected_feedback": "The example text is readable in place"},
+        {"id": "S3-A03", "step": "Judge whether an example fits trip planning", "when": "after A02", "component": "prompt suggestions", "expected_feedback": "Examples are distinguishable by the task they suggest"},
+        {"id": "S3-A04", "step": "Select the matching example", "when": "if A03 = match", "component": "prompt suggestions", "expected_feedback": "The selection is visibly marked, or the text moves into the field"},
+        {"id": "S3-A05", "step": "Compose the request with destination, days, budget, interests", "when": "if A03 = no match", "component": "input field", "expected_feedback": "The typed text appears in the field"},
+        {"id": "S3-A06", "step": "Send", "when": "after A04 or A05", "component": "send control", "expected_feedback": "The message leaves the field and a pending state appears"},
+        {"id": "S3-A07", "step": "Check that the text appears as the user's message", "when": "after A06", "component": "user message bubble", "expected_feedback": "The submitted text is visible as the user's message"},
+        {"id": "S3-A08", "step": "Check that a response started", "when": "after A07", "component": "response card", "expected_feedback": "A placeholder, a streaming answer or the first lines appear"},
+        {"id": "S3-A09", "step": "Read the plan", "when": "after A08", "component": "response card", "expected_feedback": "The plan is readable in full"},
+        {"id": "S3-A10", "step": "Check that both days and the constraints are covered", "when": "after A09, and after A13", "component": "response card", "expected_feedback": "The content needed for the comparison is visible"},
+        {"id": "S3-A11", "step": "Compose an additional constraint", "when": "if A10 = incomplete", "component": "input field", "expected_feedback": "The typed text appears in the field"},
+        {"id": "S3-A12", "step": "Send the refinement", "when": "after A11", "component": "send control", "expected_feedback": "The message leaves the field and a pending state appears"},
+        {"id": "S3-A13", "step": "Read the updated plan", "when": "after A12", "component": "response card", "expected_feedback": "The updated plan is readable in full"},
+        {"id": "S3-A14", "step": "Judge whether it is usable", "when": "after A10 = acceptable", "component": "response card", "expected_feedback": "No system feedback; the judgement is internal"}
+      ],
+      "paths": [
+        {"id": "S3-P1", "label": "example first", "steps": ["S3-A01", "S3-A02", "S3-A03", "S3-A04", "S3-A06", "S3-A07", "S3-A08", "S3-A09", "S3-A10", "S3-A11", "S3-A12", "S3-A13", "S3-A10", "S3-A14"]},
+        {"id": "S3-P2", "label": "written from scratch", "steps": ["S3-A01", "S3-A02", "S3-A03", "S3-A05", "S3-A06", "S3-A07", "S3-A08", "S3-A09", "S3-A10", "S3-A11", "S3-A12", "S3-A13", "S3-A10", "S3-A14"]}
+      ]
+    }
+  ]
+}
