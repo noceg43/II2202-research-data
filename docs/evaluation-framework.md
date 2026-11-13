@@ -21,10 +21,10 @@ A four-point severity rating scale (0–3) will be used to classify usability pr
 
 |RATING|	SEVERITY|	DESCRIPTION|
 |---|---|---|
-|0|	No problem|	No identifiable usability problem is present.|
-|1|	Minor|	A small inconvenience that causes minimal additional effort and does not significantly interrupt the interaction.|
-|2|	Moderate|	A problem that causes confusion, additional effort or interruption, but allows the user to continue through an alternative action.|
-|3|	Major|	A problem that significantly obstructs task progression, prevents task completion or leads the user towards an unintended action without a clear recovery path.|
+|0|	No problem |	No identifiable usability problem is present. |
+|1|	Minor |	A small inconvenience that causes minimal additional effort and does not significantly interrupt the interaction. |
+|2|	Moderate |	A problem that causes confusion, additional effort or interruption, but allows the user to continue through an alternative action.|
+|3|	Major |	A problem that significantly obstructs task progression, prevents task completion or leads the user towards an unintended action without a clear recovery path.|
 
 
 ## 3. Cognitive Walkthrough Evaluation Sheet
@@ -32,28 +32,29 @@ A four-point severity rating scale (0–3) will be used to classify usability pr
 Section A: Evaluation Information
 
 |Field	|Details|
-|---|---|---|
-|Product|	Chat gpt|
+|---|---|
+|Product |	Chat gpt|
 |Platform	|Web / Mobile|
-|Evaluator|	|
+|Evaluator |	|
 |Date	| |
 |Task	| |
 |Starting condition	| |
 
 Section B: Action-by-Action Walkthrough
 |Evaluation criteria|	Step 1|	Step 2|	Step 3|	Step 4|
-|---|---|---|
-|User action|				|
-|Q1: Does the user know what to do?|	Yes / No / Uncertain	|Yes / No / Uncertain|	Yes / No / Uncertain|	Yes / No / Uncertain|
-|Q2: Can the user identify the correct action|	Yes / No / Uncertain|	Yes / No / Uncertain|	Yes / No / Uncertain|	Yes / No / Uncertain|
-|Q3: Can the user understand how the action helps achieve the goal?|	Yes / No / Uncertain|	Yes / No / Uncertain	|Yes / No / Uncertain	|Yes / No / Uncertain|
-|Q4: Is the system feedback understandable	|Yes / No / Uncertain	|Yes / No / Uncertain	|Yes / No / Uncertain	|Yes / No / Uncertain|
-|Predicted problem	|		|
+|---|---|---|---|---|
+|User action |	|  |  |  |
+|Q1: Does the user know what to do? |	Yes / No / Uncertain	| Yes / No / Uncertain |	Yes / No / Uncertain |	Yes / No / Uncertain |
+|Q2: Can the user identify the correct action |	Yes / No / Uncertain |	Yes / No / Uncertain |	Yes / No / Uncertain |	Yes / No / Uncertain |
+|Q3: Can the user understand how the action helps achieve the goal? |	Yes / No / Uncertain |	Yes / No / Uncertain	| Yes / No / Uncertain	| Yes / No / Uncertain |
+|Q4: Is the system feedback understandable	| Yes / No / Uncertain	| Yes / No / Uncertain	| Yes / No / Uncertain	| Yes / No / Uncertain |
+|Predicted problem	|  |  |  |  |
 
 
 Section C: Usability Problem Log
 Complete this section whenever a problem is identified.
 Field	Observation
+
 |Problem ID	| |
 |Product and platform	| |
 |Task and action step	| |
