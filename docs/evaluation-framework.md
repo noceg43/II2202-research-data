@@ -52,17 +52,26 @@ Section B: Action-by-Action Walkthrough
 
 
 Section C: Usability Problem Log
+
 Complete this section whenever a problem is identified.
 Field	Observation
 
 |Problem ID	| |
+
 |Product and platform	| |
+
 |Task and action step	| |
+
 |Interface component	| |
+
 |Description of predicted usability problem	| |
+
 |Relevant Human-AI Interaction guideline(s)	| |
+
 |Severity rating (0–3)	| |
+
 |Evidence / screenshot reference	| |
+
 |Possible explanation	| |
 
 
