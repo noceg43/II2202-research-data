@@ -1,0 +1,39 @@
+{
+  "evaluator_id": "E01",
+  "scenario_id": "SC01",
+  "platform_name": "Claude",
+  "platform_type": "web",
+
+  "steps": [
+    {
+      "step_id": "S1-A01",
+      "screenshot": "screenshots/01-empty-state.png",
+      "problems": [],
+      "notes": "The empty chat interface is visible."
+    },
+    {
+      "step_id": "S1-A02",
+      "screenshot": "screenshots/02-suggestions.png",
+      "problems": ["P001"],
+      "notes": "Prompt suggestions are visible."
+    }
+  ],
+
+  "problems": [
+    {
+      "problem_id": "P001",
+      "step_id": "S1-A02",
+      "what_happened": "The suggested prompts are visible, but their purpose is not immediately clear.",
+      "questions": {
+        "Q1": "yes",
+        "Q2": "doubtful",
+        "Q3": "yes",
+        "Q4": "yes"
+      },
+      "severity": 2,
+      "guidelines": ["G1"],
+      "evidence": "screenshots/02-suggestions.png",
+      "notes": "The user may need additional effort to understand what the suggestions do."
+    }
+  ]
+}
