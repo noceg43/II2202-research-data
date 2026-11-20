@@ -20,7 +20,9 @@
         {"id": "S1-A11", "step": "Judge whether it is usable", "when": "after A10", "component": "response card", "expected_feedback": "No system feedback; the judgement is internal"},
         {"id": "S1-A12", "step": "Select a capability entry that matches the task", "when": "if capability entries exist", "component": "capability menu", "expected_feedback": "The entry is visibly selected and a submenu appears"},
         {"id": "S1-A13", "step": "Select an entry in the capability submenu", "when": "after A12", "component": "capability submenu", "expected_feedback": "The entry is marked and its template appears in the field"},
-        {"id": "S1-A14", "step": "Add own content to the injected template", "when": "after A13", "component": "input field", "expected_feedback": "Template plus added text visible in the field"}
+        {"id": "S1-A14", "step": "Add own content to the injected template", "when": "after A13", "component": "input field", "expected_feedback": "Template plus added text visible in the field"},
+        {"id": "S1-A15", "step": "Close the capability panel without selecting an entry", "when": "if A12 = no match", "component": "capability menu", "expected_feedback": "The panel closes and the composer returns to its default state"},
+        {"id": "S1-A16", "step": "Select an autocomplete completion while typing", "when": "if completions appear during A05", "component": "autocomplete list", "expected_feedback": "The completion fills the field; nothing is sent until Send"}
       ],
       "paths": [
         {"id": "S1-P1", "label": "example used", "steps": ["S1-A01", "S1-A02", "S1-A03", "S1-A04", "S1-A07", "S1-A08", "S1-A09", "S1-A10", "S1-A11"]},
@@ -49,7 +51,8 @@
         {"id": "S2-A12", "step": "Read the summary", "when": "after A11", "component": "response card", "expected_feedback": "The full summary is readable"},
         {"id": "S2-A13", "step": "Check the summary against the document: requirements, grading, dates", "when": "after A12", "component": "response card", "expected_feedback": "The content needed for the comparison is visible"},
         {"id": "S2-A14", "step": "Judge whether it is usable", "when": "after A13", "component": "response card", "expected_feedback": "No system feedback; the judgement is internal"},
-        {"id": "S2-A15", "step": "Check that the attachment is shown as attached in the conversation", "when": "after A10", "component": "attachment card", "expected_feedback": "The file is visibly attached in the conversation"}
+        {"id": "S2-A15", "step": "Check that the attachment is shown as attached in the conversation", "when": "after A10", "component": "attachment card", "expected_feedback": "The file is visibly attached in the conversation"},
+        {"id": "S2-A16", "step": "Select an autocomplete completion while typing", "when": "if completions appear during A07", "component": "autocomplete list", "expected_feedback": "The completion fills the field; nothing is sent until Send"}
       ],
       "paths": [
         {"id": "S2-P1", "label": "example first", "steps": ["S2-A01", "S2-A02", "S2-A03", "S2-A08", "S2-A04", "S2-A05", "S2-A06", "S2-A09", "S2-A10", "S2-A15", "S2-A11", "S2-A12", "S2-A13", "S2-A14"]},
@@ -76,7 +79,11 @@
         {"id": "S3-A11", "step": "Compose an additional constraint", "when": "if A10 = incomplete", "component": "input field", "expected_feedback": "The typed text appears in the field"},
         {"id": "S3-A12", "step": "Send the refinement", "when": "after A11", "component": "send control", "expected_feedback": "The message leaves the field and a pending state appears"},
         {"id": "S3-A13", "step": "Read the updated plan", "when": "after A12", "component": "response card", "expected_feedback": "The updated plan is readable in full"},
-        {"id": "S3-A14", "step": "Judge whether it is usable", "when": "after A10 = acceptable", "component": "response card", "expected_feedback": "No system feedback; the judgement is internal"}
+        {"id": "S3-A14", "step": "Judge whether it is usable", "when": "after A10 = acceptable", "component": "response card", "expected_feedback": "No system feedback; the judgement is internal"},
+        {"id": "S3-A15", "step": "Close the example panel without selecting an entry", "when": "if A03 = no match after opening a panel", "component": "prompt suggestions", "expected_feedback": "The panel closes and the composer returns to its default state"},
+        {"id": "S3-A16", "step": "Select an autocomplete completion while typing", "when": "if completions appear during A05", "component": "autocomplete list", "expected_feedback": "The completion fills the field; nothing is sent until Send"},
+        {"id": "S3-A17", "step": "Select a follow-up suggestion as the refinement", "when": "if A10 = incomplete and suggestions appear, instead of A11", "component": "follow-up suggestions", "expected_feedback": "The suggestion is placed in the field or sent as the user's message, and its effect is clear before selecting"},
+        {"id": "S3-A18", "step": "Switch on a mode offered in the composer", "when": "optional, before A06", "component": "mode control", "expected_feedback": "The mode is visibly on and its effect is stated"}
       ],
       "paths": [
         {"id": "S3-P1", "label": "example first", "steps": ["S3-A01", "S3-A02", "S3-A03", "S3-A04", "S3-A06", "S3-A07", "S3-A08", "S3-A09", "S3-A10", "S3-A11", "S3-A12", "S3-A13", "S3-A10", "S3-A14"]},

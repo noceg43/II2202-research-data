@@ -1,0 +1,110 @@
+{
+  "run": {
+    "evaluator_id": "GN",
+    "scenario_id": "S2",
+    "platform_name": "Claude",
+    "platform_type": "web",
+    "date": "2026-11-19",
+    "product_version": "Sonnet 5.5 Medium (shown in composer), free plan",
+    "account_state": "logged_in",
+    "interface_language": "en",
+    "notes": "Path S2-P3 (attach first, then type the prompt)."
+  },
+  "steps": [
+    {
+      "step_id": "S2-A01",
+      "screenshot": "../screenshots/gn/s2/claude-web/01-open.png",
+      "problems": [],
+      "notes": "Greeting 'Hello, night owl', composer, Chat/Cowork switch, model 'Sonnet 5.5 Medium', chips Write, Learn, Code, Life stuff, Claude's choice."
+    },
+    {
+      "step_id": "S2-A02",
+      "screenshot": "../screenshots/gn/s2/claude-web/01-open.png",
+      "problems": [],
+      "notes": "Chips are category labels, not example prompts."
+    },
+    {
+      "step_id": "S2-A03",
+      "screenshot": "../screenshots/gn/s2/claude-web/02-file-attached.png",
+      "problems": [
+        {
+          "what_happened": "After the PDF is attached the suggestions do not change (still Write, Learn, Code, Life stuff, Claude's choice); nothing offers to summarise or ask about the document.",
+          "severity": 1,
+          "guidelines": [
+            "G4",
+            "G3"
+          ],
+          "evidence": "../screenshots/gn/s2/claude-web/02-file-attached.png",
+          "notes": ""
+        }
+      ],
+      "notes": "No chip implies a document; after attaching the file the same five chips stay unchanged."
+    },
+    {
+      "step_id": "S2-A04",
+      "screenshot": "../screenshots/gn/s2/claude-web/02-file-attached.png",
+      "problems": [],
+      "notes": "Attachment menu / file picker not captured; the file is visible as attached in the next screenshot."
+    },
+    {
+      "step_id": "S2-A05",
+      "screenshot": "../screenshots/gn/s2/claude-web/02-file-attached.png",
+      "problems": [],
+      "notes": "Attachment menu / file picker not captured; the file is visible as attached in the next screenshot."
+    },
+    {
+      "step_id": "S2-A06",
+      "screenshot": "../screenshots/gn/s2/claude-web/02-file-attached.png",
+      "problems": [],
+      "notes": "Thumbnail of page 1 with a 'PDF' label in the composer; send button active (orange). The file name is not shown on the thumbnail."
+    },
+    {
+      "step_id": "S2-A07",
+      "screenshot": "../screenshots/gn/s2/claude-web/03-prompt-and-file.png",
+      "problems": [],
+      "notes": "Prompt typed under the file thumbnail."
+    },
+    {
+      "step_id": "S2-A09",
+      "screenshot": "../screenshots/gn/s2/claude-web/03-prompt-and-file.png",
+      "problems": [],
+      "notes": "Send button active. No after-send (pending) screenshot was taken."
+    },
+    {
+      "step_id": "S2-A10",
+      "screenshot": "../screenshots/gn/s2/claude-web/04-response.png",
+      "problems": [],
+      "notes": "Prompt shown verbatim as the user bubble; conversation renamed 'Summarizing task requirements and deadlines'."
+    },
+    {
+      "step_id": "S2-A15",
+      "screenshot": "../screenshots/gn/s2/claude-web/04-response.png",
+      "problems": [],
+      "notes": "PDF thumbnail shown above the user bubble."
+    },
+    {
+      "step_id": "S2-A11",
+      "screenshot": "../screenshots/gn/s2/claude-web/04-response.png",
+      "problems": [],
+      "notes": "Answer streaming (stop button and loading dots visible)."
+    },
+    {
+      "step_id": "S2-A12",
+      "screenshot": "../screenshots/gn/s2/claude-web/05-response-bottom.png",
+      "problems": [],
+      "notes": "Sections: What you need to pass (PRO1, 7.5 credits, A-F, four deliverables), Attendance requirements, responsibilities, Deadlines, Other notes."
+    },
+    {
+      "step_id": "S2-A13",
+      "screenshot": "../screenshots/gn/s2/claude-web/05-response-bottom.png",
+      "problems": [],
+      "notes": "Correct on the key check: 'There are none in this document', with where to find dates (Canvas, course PM). Also says the syllabus does not specify which lectures are compulsory or how the final grade is calculated."
+    },
+    {
+      "step_id": "S2-A14",
+      "screenshot": "../screenshots/gn/s2/claude-web/05-response-bottom.png",
+      "problems": [],
+      "notes": "Usable. Ends with an offer: share the course PM to get deadlines and a checklist."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "run": {
+    "evaluator_id": "GN",
+    "scenario_id": "S2",
+    "platform_name": "ChatGPT",
+    "platform_type": "web",
+    "date": "2026-11-19",
+    "product_version": "free plan, default model (not shown)",
+    "account_state": "logged_in",
+    "interface_language": "en",
+    "notes": "Path S2-P1 variant: file attached first, then a document suggestion selected. The suggestion sent its own prompt immediately, so the typed prompt was never used."
+  },
+  "steps": [
+    {
+      "step_id": "S2-A01",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/01-open.png",
+      "problems": [],
+      "notes": "Greeting 'What's on the agenda today?', composer, three capability entries (Create an image or sticker, Write or edit, Search the web). The placeholder reads 'Write anything' although no entry is selected."
+    },
+    {
+      "step_id": "S2-A04",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/02-file-attached.png",
+      "problems": [],
+      "notes": "Attachment menu / file picker not captured; the file is visible as attached in the next screenshot."
+    },
+    {
+      "step_id": "S2-A05",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/02-file-attached.png",
+      "problems": [],
+      "notes": "Attachment menu / file picker not captured; the file is visible as attached in the next screenshot."
+    },
+    {
+      "step_id": "S2-A06",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/02-file-attached.png",
+      "problems": [],
+      "notes": "File card with a preview of page 1 and the name 'ii2202-syllab...' in the composer; placeholder 'Ask ChatGPT'; send arrow active."
+    },
+    {
+      "step_id": "S2-A02",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/02-file-attached.png",
+      "problems": [],
+      "notes": "After the file is attached the capability entries are replaced by three document suggestions: Extract tables, Create an executive brief, Create a study guide."
+    },
+    {
+      "step_id": "S2-A03",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/03-study-guide-hover.png",
+      "problems": [
+        {
+          "what_happened": "None of the three document suggestions (Extract tables, Create an executive brief, Create a study guide) matches the task of finding what is needed to pass and whether there are deadlines; Kim has to pick a near-match.",
+          "severity": 1,
+          "guidelines": [
+            "G4"
+          ],
+          "evidence": "../screenshots/gn/s2/chatgpt-web/02-file-attached.png",
+          "notes": ""
+        }
+      ],
+      "notes": "The suggestions react to the attachment, but none of them asks for a summary of requirements and deadlines; 'Create a study guide' was taken as the closest."
+    },
+    {
+      "step_id": "S2-A08",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/04-response.png",
+      "problems": [
+        {
+          "what_happened": "Selecting the suggestion sends a hidden prompt at once; Kim cannot see or edit it, cannot add the question about passing and deadlines, and the label does not say that the click sends.",
+          "severity": 2,
+          "guidelines": [
+            "G16"
+          ],
+          "evidence": "../screenshots/gn/s2/chatgpt-web/04-response.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Selecting 'Create a study guide' sends immediately the prompt 'Turn the uploaded content into a study guide with key concepts, concise explanations, examples, and review questions.' The prompt is not shown in the field before sending."
+    },
+    {
+      "step_id": "S2-A09",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/04-response.png",
+      "problems": [],
+      "notes": "Sent by the suggestion itself; no separate send action."
+    },
+    {
+      "step_id": "S2-A10",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/04-response.png",
+      "problems": [],
+      "notes": "The injected prompt appears as the user bubble, under the file card."
+    },
+    {
+      "step_id": "S2-A15",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/04-response.png",
+      "problems": [],
+      "notes": "File card 'ii2202-syllabus.pdf / PDF' shown above the user message."
+    },
+    {
+      "step_id": "S2-A11",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/04-response.png",
+      "problems": [],
+      "notes": "Answer streaming (stop button visible); conversation renamed 'Create Study Guide'."
+    },
+    {
+      "step_id": "S2-A12",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/05-response-more.png",
+      "problems": [],
+      "notes": "Long study guide: course overview, course structure card (Research, Writing, Project), assessment, then key concepts. Only the first part is captured."
+    },
+    {
+      "step_id": "S2-A13",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/05-response-more.png",
+      "problems": [
+        {
+          "what_happened": "The answer follows the suggestion's goal (a study guide with examples and review questions), not Kim's; pass requirements are buried in a long guide and deadlines are not addressed.",
+          "severity": 2,
+          "guidelines": [
+            "G4",
+            "G16"
+          ],
+          "evidence": "../screenshots/gn/s2/chatgpt-web/05-response-more.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Assessment is covered ('One project assignment (PRO1), worth 7.5 credits, graded A-F (including FX)'). Deadlines are not addressed in the captured part, because the injected prompt did not ask for them."
+    },
+    {
+      "step_id": "S2-A14",
+      "screenshot": "../screenshots/gn/s2/chatgpt-web/05-response-more.png",
+      "problems": [],
+      "notes": "Partly usable: grading is there, the deadline question is unanswered; a follow-up would be needed."
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "run": {
+    "evaluator_id": "GN",
+    "scenario_id": "S3",
+    "platform_name": "ChatGPT",
+    "platform_type": "web",
+    "date": "2026-11-19",
+    "product_version": "free plan, Think on",
+    "account_state": "logged_in",
+    "interface_language": "en",
+    "notes": "Path S3-P2. Think was switched on before sending (A18): it sits in the composer and its tooltip 'Get a smarter answer' invites it, while in Claude and Gemini a comparable change needs a model choice the user must understand, so it was not made there. The refinement 'from stockholm' was typed and sent while the first turn was still working, so the first plan was never shown. The Gemini run was done while ChatGPT was working (between 06-planning and 11-progress-2)."
+  },
+  "steps": [
+    {
+      "step_id": "S3-A01",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/01-open.png",
+      "problems": [],
+      "notes": "Heading 'What's on your mind today?', composer 'Ask ChatGPT', '+', Think, voice. Entries: 'Create an image or sticker', 'Write or edit', 'Search the web'. 'GN' initials avatar bottom-left."
+    },
+    {
+      "step_id": "S3-A02",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/01-open.png",
+      "problems": [],
+      "notes": "Three entries readable in place."
+    },
+    {
+      "step_id": "S3-A03",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/01-open.png",
+      "problems": [
+        {
+          "what_happened": "None of the three entries (image, write or edit, search the web) relates to planning; nothing suggests the chatbot can build an itinerary or budget.",
+          "severity": 1,
+          "guidelines": [
+            "G1",
+            "G4"
+          ],
+          "evidence": "../screenshots/gn/s3/chatgpt-web/01-open.png",
+          "notes": ""
+        }
+      ],
+      "notes": "None fits trip planning: A03 = no match."
+    },
+    {
+      "step_id": "S3-A05",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/02-prompt-filled.png",
+      "problems": [],
+      "notes": "Prompt typed: 'plan a trip to gothenburg 21-22 nov train budget 2500sek x2 include food and transport i want walk not taxi or bus and no museums pls. plan for each day with time and how much cost each thing'."
+    },
+    {
+      "step_id": "S3-A18",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/04-think-on.png",
+      "problems": [
+        {
+          "what_happened": "The Think tooltip only says 'Get a smarter answer'; it does not say the answer will take much longer (43 s plus 8 min 57 s in this run).",
+          "severity": 1,
+          "guidelines": [
+            "G2",
+            "G16"
+          ],
+          "evidence": "../screenshots/gn/s3/chatgpt-web/03-think-hover.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Hover on Think shows 'Get a smarter answer' (03-think-hover); Think switched on. Think is the only answer-quality control placed directly in the composer, so it is the one an ordinary user is likely to try."
+    },
+    {
+      "step_id": "S3-A06",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/05-pending.png",
+      "problems": [],
+      "notes": "Sent; title 'Plan Gothenburg Trip Costs'; 'Thinking'; stop button."
+    },
+    {
+      "step_id": "S3-A07",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/05-pending.png",
+      "problems": [],
+      "notes": "Prompt shown verbatim as the user bubble."
+    },
+    {
+      "step_id": "S3-A08",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/06-planning.png",
+      "problems": [
+        {
+          "what_happened": "'Skip' next to the progress line does not say what is skipped (the thinking, the search, or the whole step) or what the answer loses.",
+          "severity": 1,
+          "guidelines": [
+            "G16"
+          ],
+          "evidence": "../screenshots/gn/s3/chatgpt-web/06-planning.png",
+          "notes": ""
+        }
+      ],
+      "notes": "'Planning a walking trip' with a 'Skip' link."
+    },
+    {
+      "step_id": "S3-A09",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/07-origin-typed-while-working.png",
+      "problems": [],
+      "notes": "Progress text only, no itinerary yet: 'I'll plan this as a two-person weekend starting from Jönköping… I'll assume the 2,500 SEK budget is per person (5,000 SEK total)'; 'Searched the web'; Haga Christmas market not before 28 November."
+    },
+    {
+      "step_id": "S3-A10",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/07-origin-typed-while-working.png",
+      "problems": [
+        {
+          "what_happened": "The departure city (Jönköping) was assumed without asking and without saying where it came from. It was at least stated in the progress text, which let Kim correct it before the plan was written.",
+          "severity": 1,
+          "guidelines": [
+            "G12",
+            "G13"
+          ],
+          "evidence": "../screenshots/gn/s3/chatgpt-web/07-origin-typed-while-working.png",
+          "notes": ""
+        }
+      ],
+      "notes": "No plan to check yet; the stated assumption on the departure city is wrong, so a refinement is needed."
+    },
+    {
+      "step_id": "S3-A11",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/07-origin-typed-while-working.png",
+      "problems": [],
+      "notes": "Typed 'from stockholm' while the first turn was still running; the send arrow is available during generation."
+    },
+    {
+      "step_id": "S3-A12",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/08-origin-sent.png",
+      "problems": [],
+      "notes": "Message added to the running conversation; 'Thinking'; stop button."
+    },
+    {
+      "step_id": "S3-A13",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/09-searching.png",
+      "problems": [],
+      "notes": "'Searching 5 websites' with Skip; 'For Stockholm, the train becomes the main budget pressure… direct trains in roughly 3½ hours'."
+    },
+    {
+      "step_id": "S3-A13",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/10-progress.png",
+      "problems": [],
+      "notes": "Progress steps: 'Balanced the itinerary', 'Compared walkable lodging options', 'Planned around disruptions and selected reliable departures'."
+    },
+    {
+      "step_id": "S3-A13",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/11-progress-2.png",
+      "problems": [],
+      "notes": "'Planned the budget, route, and itinerary', 'Presented the weekend plan', 'Structured and mapped the weekend route'; à la London Christmas design market 21–22 Nov, free entry."
+    },
+    {
+      "step_id": "S3-A13",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/12-progress-3.png",
+      "problems": [],
+      "notes": "'Planned and balanced a Gothenburg weekend walking itinerary', 'Refining the itinerary'."
+    },
+    {
+      "step_id": "S3-A13",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/13-response.png",
+      "problems": [],
+      "notes": "First turn collapsed to 'Worked for 43s' with no plan; second 'Worked for 8m 57s'. Card 'Gothenburg weekend trip – 21–22 November 2026 | 2 people | Departing from Stockholm', tags 'Within budget', 'Walking only', 'No museums'; 3,956 SEK for 2 people including trains, one night, meals and Liseberg; 1,978 SEK per person against the 2,500 SEK budget."
+    },
+    {
+      "step_id": "S3-A10",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/13-response.png",
+      "problems": [],
+      "notes": "Both days, origin, walking, no museums and budget are summarised at the top. The timed day-by-day part between 13-response and 14-response-bottom was not captured."
+    },
+    {
+      "step_id": "S3-A14",
+      "screenshot": "../screenshots/gn/s3/chatgpt-web/14-response-bottom.png",
+      "problems": [],
+      "notes": "Image cards (Liseberg Christmas, Haga, Skansen Kronan, Christmas design market) and 'My advice'. No follow-up suggestions. Usable."
+    }
+  ]
+}

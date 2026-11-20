@@ -1,0 +1,95 @@
+{
+  "run": {
+    "evaluator_id": "GN",
+    "scenario_id": "S3",
+    "platform_name": "Gemini",
+    "platform_type": "web",
+    "date": "2026-11-19",
+    "product_version": "model selector shows 'Hydrogen'",
+    "account_state": "logged_in",
+    "interface_language": "en",
+    "notes": "Path S3-P2. The first answer already took Stockholm as the departure city, as intended, and covered both days and all constraints, so A10 = acceptable and A11–A13 were not needed. Done while the ChatGPT run was still working."
+  },
+  "steps": [
+    {
+      "step_id": "S3-A01",
+      "screenshot": "../screenshots/gn/s3/gemini-web/01-open.png",
+      "problems": [
+        {
+          "what_happened": "No examples or capability entries are shown, so nothing tells Kim that trips or budgets can be planned.",
+          "severity": 1,
+          "guidelines": [
+            "G1"
+          ],
+          "evidence": "../screenshots/gn/s3/gemini-web/01-open.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Greeting 'Where should we start?', composer 'Ask Gemini', '+', 'Hydrogen', voice; 'Get app'. No suggestions. Profile photo bottom-left."
+    },
+    {
+      "step_id": "S3-A02",
+      "screenshot": "../screenshots/gn/s3/gemini-web/01-open.png",
+      "problems": [],
+      "notes": "No examples displayed; step not applicable."
+    },
+    {
+      "step_id": "S3-A03",
+      "screenshot": "../screenshots/gn/s3/gemini-web/01-open.png",
+      "problems": [],
+      "notes": "No examples to compare: A03 = no match by default."
+    },
+    {
+      "step_id": "S3-A05",
+      "screenshot": "../screenshots/gn/s3/gemini-web/02-prompt-filled.png",
+      "problems": [],
+      "notes": "Prompt typed: 'plan a trip to gothenburg 21-22 nov train budget 2500sek x2 include food and transport i want walk not taxi or bus and no museums pls. plan for each day with time and how much cost each thing'. Send arrow active."
+    },
+    {
+      "step_id": "S3-A06",
+      "screenshot": "../screenshots/gn/s3/gemini-web/03-pending.png",
+      "problems": [],
+      "notes": "Sent; 'Connecting to Google Maps'; stop button."
+    },
+    {
+      "step_id": "S3-A07",
+      "screenshot": "../screenshots/gn/s3/gemini-web/03-pending.png",
+      "problems": [],
+      "notes": "Prompt shown verbatim as the user bubble."
+    },
+    {
+      "step_id": "S3-A08",
+      "screenshot": "../screenshots/gn/s3/gemini-web/03-pending.png",
+      "problems": [],
+      "notes": "'Connecting to Google Maps' shows the response has started."
+    },
+    {
+      "step_id": "S3-A09",
+      "screenshot": "../screenshots/gn/s3/gemini-web/04-response.png",
+      "problems": [
+        {
+          "what_happened": "The departure city (Stockholm) was assumed without asking and without saying where it came from; it matches Kim's intent here, but Kim cannot tell whether it was a guess.",
+          "severity": 1,
+          "guidelines": [
+            "G12"
+          ],
+          "evidence": "../screenshots/gn/s3/gemini-web/04-response.png",
+          "notes": ""
+        }
+      ],
+      "notes": "'Here is a walkable, museum-free weekend itinerary for Gothenburg on November 21–22, 2026, tailored to a 5,000 SEK total budget (2,500 SEK per person x 2) covering trains, food, and activities'; Stockholm ↔ Gothenburg trains about 2,500 SEK for two; 'Accommodation is not factored into the 5,000 SEK'. Map panel with Stockholm C and Kungsparken (05-map-panel)."
+    },
+    {
+      "step_id": "S3-A10",
+      "screenshot": "../screenshots/gn/s3/gemini-web/06-response-bottom.png",
+      "problems": [],
+      "notes": "Day 2 ends with the return train 18:16–21:47 (~1,250 SEK for 2), Day 2 subtotal ~2,220 SEK, grand total ~4,750 SEK (~250 buffer); local transport 0 SEK (walking). Both days, times, costs, walking and no museums covered: acceptable. Closing question offers hotel/hostel or restaurant suggestions."
+    },
+    {
+      "step_id": "S3-A14",
+      "screenshot": "../screenshots/gn/s3/gemini-web/06-response-bottom.png",
+      "problems": [],
+      "notes": "Usable as a two-day walking plan within budget; no night's stay is included even though the trip spans two days. No follow-up suggestion chips."
+    }
+  ]
+}

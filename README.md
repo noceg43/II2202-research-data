@@ -5,7 +5,7 @@ One run = one evaluator walking one scenario on one product and platform.
 ## Layout
 - `reference/`: ID sources. `guidelines.json` (guidelines + severity, from `docs/evaluation-framework.md`), `tasks.json` (scenarios, steps, paths, from `docs/task-analysis.md`)
 - `runs/`: one JSON per run
-- `screenshots/`: images referenced by runs
+- `screenshots/`: images referenced by runs, one folder per evaluator (`screenshots/<evaluator>/`)
 - `docs/`: evaluation framework and task analysis (prose, source of truth)
 
 ## IDs
@@ -28,7 +28,7 @@ Example: `runs/s1-chatgpt-web-gn.json`.
 `severity` is 0-3 (see `reference/guidelines.json`); `guidelines` is e.g. `["G1", "G4"]`. Leave optional fields as `""`/`[]`, never `null`.
 
 ## Screenshots
-`screenshots/<scenario>/<product>-<platform>/NN-name.png`; reference relative to JSON, e.g. `../screenshots/s1/chatgpt-web/01-open.png`.
+`screenshots/<evaluator>/<scenario>/<product>-<platform>/NN-name.png` (evaluator in lowercase, e.g. `gn`); reference relative to JSON, e.g. `../screenshots/gn/s1/chatgpt-web/01-open.png`.
 
 ## Problems
 One problem per object; never merge two problems.

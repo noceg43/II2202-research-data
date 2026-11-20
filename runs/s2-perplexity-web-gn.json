@@ -1,0 +1,137 @@
+{
+  "run": {
+    "evaluator_id": "GN",
+    "scenario_id": "S2",
+    "platform_name": "Perplexity",
+    "platform_type": "web",
+    "date": "2026-11-19",
+    "product_version": "free plan, 'Model' selector default, Search mode on",
+    "account_state": "logged_in",
+    "interface_language": "en",
+    "notes": "Path S2-P3 (attach first, then type). While typing, the autocomplete entry 'summarize tool' was selected and the message sent with the file was 'summarize tool' instead of the prompt."
+  },
+  "steps": [
+    {
+      "step_id": "S2-A01",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/01-open.png",
+      "problems": [],
+      "notes": "Heading 'What do you want to know?', composer 'Ask anything...', Search / Computer switch (Search selected), 'Model', voice. No suggestions."
+    },
+    {
+      "step_id": "S2-A02",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/01-open.png",
+      "problems": [],
+      "notes": "No examples displayed; step not applicable."
+    },
+    {
+      "step_id": "S2-A03",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/01-open.png",
+      "problems": [],
+      "notes": "No examples to compare: A03 = no match by default."
+    },
+    {
+      "step_id": "S2-A04",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/02-file-attached.png",
+      "problems": [],
+      "notes": "Attachment menu / file picker not captured; the file is visible as attached in the next screenshot."
+    },
+    {
+      "step_id": "S2-A05",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/02-file-attached.png",
+      "problems": [],
+      "notes": "Attachment menu / file picker not captured; the file is visible as attached in the next screenshot."
+    },
+    {
+      "step_id": "S2-A06",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/02-file-attached.png",
+      "problems": [],
+      "notes": "Chip 'ii2202-syllabus.pdf' above the field; placeholder changes to 'Type @ for connectors'."
+    },
+    {
+      "step_id": "S2-A07",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/04-autocomplete-hover.png",
+      "problems": [
+        {
+          "what_happened": "Autocomplete offers generic web-search completions that ignore the attached document ('summarize tool', 'summarize how the components of health are related to wellness').",
+          "severity": 1,
+          "guidelines": [
+            "G4"
+          ],
+          "evidence": "../screenshots/gn/s2/perplexity-web/03-typing-autocomplete.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Typing 'summari' opens a search-autocomplete list (summarize, summarizer, summarize tool, summarizing, 'summarize how the components of health are related to wellness', summarily). 'summarize tool' is highlighted with an insert arrow (04). The completion was taken and the field became 'summarize tool'."
+    },
+    {
+      "step_id": "S2-A16",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/04-autocomplete-hover.png",
+      "problems": [
+        {
+          "what_happened": "Taking the completion 'summarize tool' replaced the request: the message that went out with the file was 'summarize tool', so the questions about passing and deadlines were never asked. Nothing warned that the completion would replace the intended prompt.",
+          "severity": 2,
+          "guidelines": [
+            "G16",
+            "G4"
+          ],
+          "evidence": "../screenshots/gn/s2/perplexity-web/05-response.png",
+          "notes": "No screenshot between the selection and the answer, so it is not visible whether the completion sent at once or after pressing send."
+        }
+      ],
+      "notes": "Completion 'summarize tool' selected."
+    },
+    {
+      "step_id": "S2-A09",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/05-response.png",
+      "problems": [],
+      "notes": "Not captured; the message was sent as 'summarize tool'."
+    },
+    {
+      "step_id": "S2-A10",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/05-response.png",
+      "problems": [],
+      "notes": "User bubble 'summarize tool' under the file card."
+    },
+    {
+      "step_id": "S2-A15",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/05-response.png",
+      "problems": [],
+      "notes": "File card 'ii2202-syllabus.pdf / PDF file' above the user bubble; 'Sources 1' panel on the right."
+    },
+    {
+      "step_id": "S2-A11",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/05-response.png",
+      "problems": [
+        {
+          "what_happened": "After one upload a banner says the free-plan file upload limit is reached; it covers part of the answer and gives no prior warning that only one file could be uploaded.",
+          "severity": 1,
+          "guidelines": [
+            "G2",
+            "G16"
+          ],
+          "evidence": "../screenshots/gn/s2/perplexity-web/05-response.png",
+          "notes": ""
+        }
+      ],
+      "notes": "'Finished 3s' status; pending state not captured. Banner over the answer: 'You've reached the file upload limit on the Free plan' with an Upgrade button."
+    },
+    {
+      "step_id": "S2-A12",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/06-response-bottom.png",
+      "problems": [],
+      "notes": "'Course summary': course description, What students learn, Structure and assessment, Requirements and responsibilities; inline citations to the PDF."
+    },
+    {
+      "step_id": "S2-A13",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/06-response-bottom.png",
+      "problems": [],
+      "notes": "Requirements and grading are covered (PRO1, 7.5 credits, A-F incl. FX, compulsory seminars). Deadlines are not mentioned, because the sent message did not ask about them."
+    },
+    {
+      "step_id": "S2-A14",
+      "screenshot": "../screenshots/gn/s2/perplexity-web/06-response-bottom.png",
+      "problems": [],
+      "notes": "Partly usable: the deadline question is unanswered; a follow-up would be needed."
+    }
+  ]
+}

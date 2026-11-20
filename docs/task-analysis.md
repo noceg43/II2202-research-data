@@ -32,6 +32,8 @@ Kim, 27, master's student in an unrelated field. Has used a chatbot a few times,
 | A12 | Select a capability entry that matches the task | if capability entries exist | capability menu | The entry is visibly selected and a submenu appears |
 | A13 | Select an entry in the capability submenu | after A12 | capability submenu | The entry is marked and its template appears in the field |
 | A14 | Add own content to the injected template | after A13 | input field | Template plus added text visible in the field |
+| A15 | Close the capability panel without selecting an entry | if A12 = no match | capability menu | The panel closes and the composer returns to its default state |
+| A16 | Select an autocomplete completion while typing | if completions appear during A05 | autocomplete list | The completion fills the field; nothing is sent until Send |
 
 ```
 P1  = A01 A02 A03 A04 A07 A08 A09 A10 A11          example used
@@ -39,6 +41,8 @@ P1e = A01 A02 A03 A04 A06 A07 A08 A09 A10 A11      example edited
 P2  = A01 A02 A03 A05 A07 A08 A09 A10 A11          written from scratch
 P3  = A01 A12 A13 A14 A07 A08 A09 A10 A11          capability template
 ```
+
+Steps A15 and A16 are not part of any path: they are recorded where they happen in a run (added after the first web runs).
 
 ## S2 — Summarise a document
 
@@ -63,12 +67,15 @@ P3  = A01 A12 A13 A14 A07 A08 A09 A10 A11          capability template
 | A13 | Check the summary against the document: requirements, grading, dates | after A12 | response card | The content needed for the comparison is visible |
 | A14 | Judge whether it is usable | after A13 | response card | No system feedback; the judgement is internal |
 | A15 | Check that the attachment is shown as attached in the conversation | after A10 | attachment card | The file is visibly attached in the conversation |
+| A16 | Select an autocomplete completion while typing | if completions appear during A07 | autocomplete list | The completion fills the field; nothing is sent until Send |
 
 ```
 P1 = A01 A02 A03 A08 A04 A05 A06 A09 A10 A15 A11 A12 A13 A14   example first
 P2 = A01 A02 A03 A07 A04 A05 A06 A09 A10 A15 A11 A12 A13 A14   prompt first
 P3 = A01 A02 A03 A04 A05 A06 A07 A09 A10 A15 A11 A12 A13 A14   attach first
 ```
+
+Steps A16 are not part of any path: they are recorded where they happen in a run (added after the first web runs).
 
 **Why this scenario.** It is the case where the start is not carried by a suggestion, which is the "alternative affordance" condition. `P3` exists here and not in S1.
 
@@ -78,7 +85,7 @@ P3 = A01 A02 A03 A04 A05 A06 A07 A09 A10 A15 A11 A12 A13 A14   attach first
 
 **Task end.** A plan covering both days and the constraints, after one refinement turn.
 
-**Status.** 14 steps, 2 paths, not yet tested.
+**Status.** 18 steps (A15–A18 recorded outside the paths), 2 paths, walked on the four web products on 2026-11-19.
 
 | ID | Step | When | Component | Expected feedback |
 | --- | --- | --- | --- | --- |
@@ -96,11 +103,17 @@ P3 = A01 A02 A03 A04 A05 A06 A07 A09 A10 A15 A11 A12 A13 A14   attach first
 | A12 | Send the refinement | after A11 | send control | The message leaves the field and a pending state appears |
 | A13 | Read the updated plan | after A12 | response card | The updated plan is readable in full |
 | A14 | Judge whether it is usable | after A10 = acceptable | response card | No system feedback; the judgement is internal |
+| A15 | Close the example panel without selecting an entry | if A03 = no match after opening a panel | prompt suggestions | The panel closes and the composer returns to its default state |
+| A16 | Select an autocomplete completion while typing | if completions appear during A05 | autocomplete list | The completion fills the field; nothing is sent until Send |
+| A17 | Select a follow-up suggestion as the refinement | if A10 = incomplete and suggestions appear, instead of A11 | follow-up suggestions | The suggestion is placed in the field or sent as the user's message, and its effect is clear before selecting |
+| A18 | Switch on a mode offered in the composer | optional, before A06 | mode control | The mode is visibly on and its effect is stated |
 
 ```
 P1 = A01 A02 A03 A04 A06 A07 A08 A09 A10 A11 A12 A13 A10 A14   example first
 P2 = A01 A02 A03 A05 A06 A07 A08 A09 A10 A11 A12 A13 A10 A14   written from scratch
 ```
+
+Steps A15, A16, A17 and A18 are not part of any path: they are recorded where they happen in a run (added after the first web runs).
 
 **Why this scenario.** It tests what happens after the first answer, where follow-up suggestions appear. `A10` is visited twice: that is the loop, not a second step.
 

@@ -1,0 +1,163 @@
+{
+  "run": {
+    "evaluator_id": "GN",
+    "scenario_id": "S3",
+    "platform_name": "Claude",
+    "platform_type": "web",
+    "date": "2026-11-19",
+    "product_version": "Sonnet 5.5 Medium (free plan)",
+    "account_state": "logged_in",
+    "interface_language": "en",
+    "notes": "Path S3-P2 with an A02 look into the 'Life stuff' category (no match, closed: A15). Refinement loop run twice ('from stockholm', 'budget is 2500 for each'), then the 'Create a spreadsheet' chip under the answer (A17)."
+  },
+  "steps": [
+    {
+      "step_id": "S3-A01",
+      "screenshot": "../screenshots/gn/s3/claude-web/01-open.png",
+      "problems": [],
+      "notes": "Greeting 'Hello, night owl', composer 'How can I help you today?', Chat / Cowork, 'Sonnet 5.5 Medium', voice. Chips: Write, Learn, Code, Life stuff, Claude's choice."
+    },
+    {
+      "step_id": "S3-A02",
+      "screenshot": "../screenshots/gn/s3/claude-web/03-life-stuff-panel.png",
+      "problems": [],
+      "notes": "'Life stuff' opened (hover in 02-life-stuff-hover): 'Guide me through a decision-making framework for a life choice', 'Plan retirement activities', 'Create cleaning routines', 'Plan educational pursuits', 'Create family activities'. Placeholder becomes 'Type / for skills'."
+    },
+    {
+      "step_id": "S3-A03",
+      "screenshot": "../screenshots/gn/s3/claude-web/03-life-stuff-panel.png",
+      "problems": [
+        {
+          "what_happened": "No category or entry covers travel or trip planning; 'Life stuff', the nearest category, only offers retirement, cleaning, education and family activities.",
+          "severity": 1,
+          "guidelines": [
+            "G1",
+            "G4"
+          ],
+          "evidence": "../screenshots/gn/s3/claude-web/03-life-stuff-panel.png",
+          "notes": ""
+        }
+      ],
+      "notes": "No entry fits a trip: A03 = no match."
+    },
+    {
+      "step_id": "S3-A15",
+      "screenshot": "../screenshots/gn/s3/claude-web/03-life-stuff-panel.png",
+      "problems": [],
+      "notes": "Panel closed with the x without selecting an entry (closing not captured separately)."
+    },
+    {
+      "step_id": "S3-A05",
+      "screenshot": "../screenshots/gn/s3/claude-web/04-prompt-filled.png",
+      "problems": [],
+      "notes": "Panel closed; prompt typed: 'plan a trip to gothenburg 21-22 nov train budget 2500sek x2 include food and transport i want walk not taxi or bus and no museums pls. plan for each day with time and how much cost each thing'."
+    },
+    {
+      "step_id": "S3-A06",
+      "screenshot": "../screenshots/gn/s3/claude-web/05-pending.png",
+      "problems": [],
+      "notes": "Sent; title 'Gothenburg budget trip plan'; animated status line, 26s; stop button. Two status lines render on top of each other in the screenshot."
+    },
+    {
+      "step_id": "S3-A07",
+      "screenshot": "../screenshots/gn/s3/claude-web/05-pending.png",
+      "problems": [],
+      "notes": "Prompt shown verbatim as the user bubble."
+    },
+    {
+      "step_id": "S3-A08",
+      "screenshot": "../screenshots/gn/s3/claude-web/05-pending.png",
+      "problems": [],
+      "notes": "Status line visible: response started."
+    },
+    {
+      "step_id": "S3-A09",
+      "screenshot": "../screenshots/gn/s3/claude-web/06-response.png",
+      "problems": [],
+      "notes": "'Searched the web'. 'Here's a walking plan with no museums, no taxis and no buses'; 'I assumed 2500 SEK is the total for 2 people… accommodation is not included'; 'Jönköping to Gothenburg… Return for 2 people: about 950 SEK'; Saturday timeline with time and cost per item."
+    },
+    {
+      "step_id": "S3-A10",
+      "screenshot": "../screenshots/gn/s3/claude-web/07-response-bottom.png",
+      "problems": [
+        {
+          "what_happened": "The departure city (Jönköping) was assumed without asking and without saying where it came from; Kim has to notice it inside the plan and correct it.",
+          "severity": 2,
+          "guidelines": [
+            "G12",
+            "G13"
+          ],
+          "evidence": "../screenshots/gn/s3/claude-web/06-response.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Both days with times and costs; budget table total 2,440, buffer 60. Walking and no museums covered; budget read as total; departure city assumed; no night's stay. 'Create a spreadsheet' chip under the answer."
+    },
+    {
+      "step_id": "S3-A11",
+      "screenshot": "../screenshots/gn/s3/claude-web/08-origin-typed.png",
+      "problems": [],
+      "notes": "Typed 'from stockholm'."
+    },
+    {
+      "step_id": "S3-A12",
+      "screenshot": "../screenshots/gn/s3/claude-web/09-origin-pending.png",
+      "problems": [],
+      "notes": "Bubble 'from stockholm'; 'Weighing last-minute fares against the trip's budget 8s'."
+    },
+    {
+      "step_id": "S3-A13",
+      "screenshot": "../screenshots/gn/s3/claude-web/10-origin-response-bottom-budget-typed.png",
+      "problems": [],
+      "notes": "Sunday plan; train 1,400, total 2,490: still a day-return plan with no bed."
+    },
+    {
+      "step_id": "S3-A10",
+      "screenshot": "../screenshots/gn/s3/claude-web/10-origin-response-bottom-budget-typed.png",
+      "problems": [],
+      "notes": "Budget still read as 2,500 for two; 'If you need a bed for the night, tell me'."
+    },
+    {
+      "step_id": "S3-A11",
+      "screenshot": "../screenshots/gn/s3/claude-web/10-origin-response-bottom-budget-typed.png",
+      "problems": [],
+      "notes": "Typed 'budget is 2500 for each'."
+    },
+    {
+      "step_id": "S3-A12",
+      "screenshot": "../screenshots/gn/s3/claude-web/11-budget-response.png",
+      "problems": [],
+      "notes": "Bubble 'budget is 2500 for each'; 'Costing out a two-day trip with an optional hotel night'."
+    },
+    {
+      "step_id": "S3-A13",
+      "screenshot": "../screenshots/gn/s3/claude-web/11-budget-response.png",
+      "problems": [],
+      "notes": "'With 2500 SEK each, you have 5,000 SEK total': train 1,500 SEK for 4 tickets, hotel about 1,300 SEK, Saturday timeline from 07:00."
+    },
+    {
+      "step_id": "S3-A10",
+      "screenshot": "../screenshots/gn/s3/claude-web/12-budget-response-bottom.png",
+      "problems": [],
+      "notes": "'Budget summary (for 2 people)': train 1,500, hotel 1,300, Saturday food and Liseberg 1,380, Sunday food 720, total 4,900, buffer 100. Both days and all constraints covered. 'Create a spreadsheet' chip again."
+    },
+    {
+      "step_id": "S3-A17",
+      "screenshot": "../screenshots/gn/s3/claude-web/13-spreadsheet-pending.png",
+      "problems": [],
+      "notes": "'Create a spreadsheet' chip selected: it sends 'Create a spreadsheet from your last answer.' at once; 'Adding transport and hotel costs to the budget'."
+    },
+    {
+      "step_id": "S3-A13",
+      "screenshot": "../screenshots/gn/s3/claude-web/14-spreadsheet.png",
+      "problems": [],
+      "notes": "'gothenburg_trip_budget.xlsx' opened in a side panel: Itinerary (day, time, activity, details, cost) and Budget sheets."
+    },
+    {
+      "step_id": "S3-A14",
+      "screenshot": "../screenshots/gn/s3/claude-web/14-spreadsheet.png",
+      "problems": [],
+      "notes": "Usable: two timed days, costs per item, walking only, no museums, within 5,000 SEK for two, plus an editable spreadsheet."
+    }
+  ]
+}

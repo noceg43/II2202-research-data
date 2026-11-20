@@ -1,0 +1,126 @@
+{
+  "run": {
+    "evaluator_id": "GN",
+    "scenario_id": "S1",
+    "platform_name": "Perplexity",
+    "platform_type": "web",
+    "date": "2026-11-19",
+    "product_version": "free plan, 'Model' selector default, Search mode on",
+    "account_state": "logged_in",
+    "interface_language": "en",
+    "notes": "Path S1-P2 (written from scratch). Search-style autocomplete appeared while typing and one completion ('statistics') was applied."
+  },
+  "steps": [
+    {
+      "step_id": "S1-A01",
+      "screenshot": "../screenshots/gn/s1/perplexity-web/01-open.png",
+      "problems": [
+        {
+          "what_happened": "The empty state frames the product as question answering ('What do you want to know?', Search selected by default) and offers no example or entry for writing tasks, so Kim may doubt that it writes emails.",
+          "severity": 1,
+          "guidelines": [
+            "G1"
+          ],
+          "evidence": "../screenshots/gn/s1/perplexity-web/01-open.png",
+          "notes": ""
+        },
+        {
+          "what_happened": "The only hint in the composer, 'Type @ for connectors', uses a term Kim does not know and says nothing about what can be asked.",
+          "severity": 1,
+          "guidelines": [
+            "G1"
+          ],
+          "evidence": "../screenshots/gn/s1/perplexity-web/01-open.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Heading 'What do you want to know?', composer placeholder 'Type @ for connectors', Search / Computer switch (Search selected), 'Model' selector, voice. No examples, no capability entries. 'Free plan - Upgrade' badge."
+    },
+    {
+      "step_id": "S1-A02",
+      "screenshot": "../screenshots/gn/s1/perplexity-web/01-open.png",
+      "problems": [],
+      "notes": "No examples displayed; step not applicable."
+    },
+    {
+      "step_id": "S1-A03",
+      "screenshot": "../screenshots/gn/s1/perplexity-web/01-open.png",
+      "problems": [],
+      "notes": "No examples to compare: A03 = no match by default."
+    },
+    {
+      "step_id": "S1-A05",
+      "screenshot": "../screenshots/gn/s1/perplexity-web/06-prompt-filled.png",
+      "problems": [
+        {
+          "what_happened": "Autocomplete offers web-search completions of Kim's personal request ('my station', 'static website', 'statistics club'); they are unrelated to the task and cover the area under the composer while typing.",
+          "severity": 2,
+          "guidelines": [
+            "G4",
+            "G3"
+          ],
+          "evidence": "../screenshots/gn/s1/perplexity-web/02-typing-autocomplete.png",
+          "notes": ""
+        }
+      ],
+      "notes": "While typing, a search-autocomplete list opens under the composer (02-typing-autocomplete): '...admin of my station', '...statistics', '...static', '...static website'. Hovering a row shows an insert arrow (03). After 'statistics' was applied, new completions appear ('statistics department / club / group / and data', 04). The list disappears as typing continues (05). Final prompt in 06."
+    },
+    {
+      "step_id": "S1-A16",
+      "screenshot": "../screenshots/gn/s1/perplexity-web/04-autocomplete-applied.png",
+      "problems": [
+        {
+          "what_happened": "The insert arrow on an autocomplete row does not say whether it fills the field or sends the query; the consequence of selecting a completion is unclear.",
+          "severity": 1,
+          "guidelines": [
+            "G16"
+          ],
+          "evidence": "../screenshots/gn/s1/perplexity-web/03-autocomplete-hover.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Completion 'statistics' selected (hover in 03-autocomplete-hover); it filled the field, typing continued."
+    },
+    {
+      "step_id": "S1-A07",
+      "screenshot": "../screenshots/gn/s1/perplexity-web/06-prompt-filled.png",
+      "problems": [],
+      "notes": "Send arrow active. No after-send (pending) screenshot was taken."
+    },
+    {
+      "step_id": "S1-A08",
+      "screenshot": "../screenshots/gn/s1/perplexity-web/07-response.png",
+      "problems": [],
+      "notes": "Prompt shown as the user bubble at the top of an Answer / Links / Images view, Sources panel on the right."
+    },
+    {
+      "step_id": "S1-A09",
+      "screenshot": "../screenshots/gn/s1/perplexity-web/07-response.png",
+      "problems": [
+        {
+          "what_happened": "A banner 'Pro - Free preview of advanced search enabled' appears under the answer: a mode was switched on without Kim asking, and it is not clear what it changed in this answer.",
+          "severity": 1,
+          "guidelines": [
+            "G14",
+            "G16"
+          ],
+          "evidence": "../screenshots/gn/s1/perplexity-web/07-response.png",
+          "notes": ""
+        }
+      ],
+      "notes": "'Finished 1s' status above the answer; pending state not captured."
+    },
+    {
+      "step_id": "S1-A10",
+      "screenshot": "../screenshots/gn/s1/perplexity-web/07-response.png",
+      "problems": [],
+      "notes": "Plain-text email: Subject, 'Dear Ms Lindqvist', body, 'Kind regards, [Your name] [Course code / student ID]' (08-response-bottom). Sources panel present although no source is relevant."
+    },
+    {
+      "step_id": "S1-A11",
+      "screenshot": "../screenshots/gn/s1/perplexity-web/08-response-bottom.png",
+      "problems": [],
+      "notes": "Usable with light editing: subject, dates 20 -> 23 Nov, illness, doctor's note offered, formal, short."
+    }
+  ]
+}
