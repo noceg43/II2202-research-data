@@ -1,0 +1,10 @@
+{
+  "run": {
+    "evaluator_id": "AA",
+    "scenario_id": "S2",
+    "platform_name": "Gemini",
+    "platform_type": "web",
+    "date": ""
+  },
+  "steps": []
+}
