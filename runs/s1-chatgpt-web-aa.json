@@ -4,7 +4,112 @@
     "scenario_id": "S1",
     "platform_name": "ChatGPT",
     "platform_type": "web",
-    "date": ""
+    "date": "23-11-2026"
   },
-  "steps": []
+  "steps": [
+    {
+      "step_id": "S1-A01",
+      "screenshot": "../screenshots/aa/s1/chatgpt-web/01-open.png",
+      "problems": [],
+      "notes": "Greeting 'Ready when you are.', composer 'Ask ChatGPT', Think toggle, voice. Three capability entries below: Create an image or sticker, Write or edit, Search the web. No example prompts."
+    },
+    {
+      "step_id": "S1-A12",
+      "screenshot": "../screenshots/aa/s1/chatgpt-web/02-write-or-edit-hover.png",
+      "problems": [
+        {
+          "what_happened": "The capability entries are generic categories; nothing in the empty state mentions writing an email, so Kim must infer that 'Write or edit' covers the task.",
+          "severity": 1,
+          "guidelines": [
+            "G1"
+          ],
+          "evidence": "../screenshots/aa/s1/chatgpt-web/01-open.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Hover on 'Write or edit' shows a dismiss x. Selecting it opens the submenu (03-submenu); placeholder becomes 'Write anything'."
+    },
+    {
+      "step_id": "S1-A13",
+      "screenshot": "../screenshots/aa/s1/chatgpt-web/03-submenu.png",
+      "problems": [
+        {
+          "what_happened": "No submenu entry matches the email task (Summarize a passage / Rewrite for clarity / Polish a message); Kim has to pick a near-match that is about rewriting existing text, not writing a new email.",
+          "severity": 2,
+          "guidelines": [
+            "G4",
+            "G1"
+          ],
+          "evidence": "../screenshots/aa/s1/chatgpt-web/03-submenu.png",
+          "notes": ""
+        },
+        {
+          "what_happened": "The submenu entries change between sessions: on 2026-11-02 'Turn notes into an email' was offered, in this run it is not. A user cannot rely on finding the same entry again.",
+          "severity": 1,
+          "guidelines": [
+            "G14"
+          ],
+          "evidence": "../screenshots/aa/s1/chatgpt-web/03-submenu.png",
+          "notes": "Earlier set: 2026-11-02 run, ok-test/hta/evidence/S1/shots/03-submenu-turn-notes-into-email.png."
+        },
+        {
+          "what_happened": "The entry labels do not say that selecting one inserts an instruction into the composer; the consequence is only visible after the click.",
+          "severity": 1,
+          "guidelines": [
+            "G16"
+          ],
+          "evidence": "../screenshots/aa/s1/chatgpt-web/04-template-injected.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Submenu: Summarize a passage, Rewrite for clarity, Polish a message. None is about writing a new email; 'Rewrite for clarity' was selected as the closest."
+    },
+    {
+      "step_id": "S1-A14",
+      "screenshot": "../screenshots/aa/s1/chatgpt-web/05-prompt-filled.png",
+      "problems": [
+        {
+          "what_happened": "The injected instruction asks to rewrite 'my text' for clarity, while Kim's text is a request to write a new formal email. The combined prompt contradicts itself and nothing shows which part the model will follow.",
+          "severity": 2,
+          "guidelines": [
+            "G16",
+            "G2"
+          ],
+          "evidence": "../screenshots/aa/s1/chatgpt-web/05-prompt-filled.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Template injected: 'Rewrite my text so it feels clearer, cleaner, and easier to read. Here is my text:' (04-template-injected); the request appended after it."
+    },
+    {
+      "step_id": "S1-A07",
+      "screenshot": "../screenshots/aa/s1/chatgpt-web/05-prompt-filled.png",
+      "problems": [],
+      "notes": "Send arrow is active once the field has text. No after-send (pending) screenshot was taken."
+    },
+    {
+      "step_id": "S1-A08",
+      "screenshot": "../screenshots/aa/s1/chatgpt-web/06-response.png",
+      "problems": [],
+      "notes": "The whole prompt, template prefix included, is shown as the right-aligned user bubble."
+    },
+    {
+      "step_id": "S1-A09",
+      "screenshot": "../screenshots/aa/s1/chatgpt-web/06-response.png",
+      "problems": [],
+      "notes": "Response card present; the pending state was not captured. Conversation renamed 'Rewrite Extension Email'."
+    },
+    {
+      "step_id": "S1-A10",
+      "screenshot": "../screenshots/aa/s1/chatgpt-web/06-response.png",
+      "problems": [],
+      "notes": "Email card: recipient 'Anna Lindqvist', subject 'Request for Extension - Statistics Lab 2', body, copy / open / 'Connect email' actions. Scroll arrow to see the end (07-response-bottom)."
+    },
+    {
+      "step_id": "S1-A11",
+      "screenshot": "../screenshots/aa/s1/chatgpt-web/07-response-bottom.png",
+      "problems": [],
+      "notes": "Usable with light editing: subject, dates 20 -> 23 Nov, illness, doctor's note offered, under 150 words, [Your Name] placeholder. Salutation 'Dear Anna,' is less formal than requested. Two follow-up suggestions appear under the card: 'Make the request more direct', 'Add the course administrator context'."
+    }
+  ]
 }
