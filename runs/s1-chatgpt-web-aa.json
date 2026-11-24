@@ -5,6 +5,9 @@
     "platform_name": "ChatGPT",
     "platform_type": "web",
     "date": "23-11-2026"
+    "product_version": "free plan, default model (not shown)",
+    "account_state": "logged_in",
+    "interface_language": "en"
   },
   "steps": [
     {
