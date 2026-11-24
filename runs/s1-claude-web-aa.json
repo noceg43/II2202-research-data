@@ -5,6 +5,9 @@
     "platform_name": "Claude",
     "platform_type": "web",
     "date": ""
+    "product_version": "Sonnet 5.5 Medium (shown in composer), free plan",
+    "account_state": "logged_in",
+    "interface_language": "en",
   },
   "steps": []
 }
