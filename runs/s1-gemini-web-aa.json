@@ -95,13 +95,13 @@
     },
     {
       "step_id": "S1-A10",
-      "screenshot": "../screenshots/gn/s1/gemini-web/06-response.png",
+      "screenshot": "../screenshots/aa/s1/gemini-web/06-response.png",
       "problems": [],
       "notes": "Direct email with Subject and placeholders."
     },
     {
       "step_id": "S1-A11",
-      "screenshot": "../screenshots/gn/s1/gemini-web/07-response-bottom.png",
+      "screenshot": "../screenshots/aa/s1/gemini-web/07-response-bottom.png",
       "problems": [],
       "notes": "Usable with light editing: subject, formal, placeholders."
     }
