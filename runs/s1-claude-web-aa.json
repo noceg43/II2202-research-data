@@ -4,10 +4,60 @@
     "scenario_id": "S1",
     "platform_name": "Claude",
     "platform_type": "web",
-    "date": ""
+    "date": "23-11-2026"
     "product_version": "Sonnet 5.5 Medium (shown in composer), free plan",
     "account_state": "logged_in",
     "interface_language": "en",
   },
-  "steps": []
+  "steps": [
+     {
+      "step_id": "S1-A01",
+      "screenshot": "../screenshots/aa/s1/claude-web/01-open.png",
+      "problems": [],
+      "notes": "Greeting 'Moonlit chat',  model 'Sonnet 5.5 Medium', voice."
+    },
+    {
+      "step_id": "S1-A12",
+      "screenshot": "../screenshots/aa/s1/claude-web/02-prompt.png",
+      "problems": [
+        {
+          "what_happened": " No additional prompts pop up.",
+          "severity": 1,
+          "guidelines": [
+            "G4"
+          ],
+          "evidence": "../screenshots/aa/s1/claude-web/02-prompt.png",
+          "notes": ""
+        },
+      ],
+    },
+    {
+      "step_id": "S1-A15",
+      "screenshot": "../screenshots/aa/s1/claude-web/03-response.png",
+      "problems": [],
+      "notes": "Response displayed."
+    },
+    {
+      "step_id": "S1-A10",
+      "screenshot": "../screenshots/aa/s1/claude-web/04-response-bottom.png",
+      "problems": [
+        {
+          "what_happened": "'Open in Mail' is offered on the card without saying whether it opens a draft, or requires connecting an account.",
+          "severity": 1,
+          "guidelines": [
+            "G16"
+          ],
+          "evidence": "../screenshots/gn/s1/claude-web/04-response-bottom.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Email card with a 'Subject:' field, body, Copy and 'Open in Mail' actions, then a short note."
+    },
+    {
+      "step_id": "S1-A11",
+      "screenshot": "../screenshots/gn/s1/claude-web/04-response-bottom.png",
+      "problems": [],
+      "notes": "Usable with light editing: subject, placeholders."
+    }
+  ]
 }
