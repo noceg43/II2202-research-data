@@ -4,7 +4,106 @@
     "scenario_id": "S1",
     "platform_name": "Gemini",
     "platform_type": "web",
-    "date": ""
+    "date": "23-11-2026"
+   "product_version": "model selector shows 'Hydrogen'",
+    "account_state": "logged_in",
+    "interface_language": "en",
   },
-  "steps": []
+  "steps": [
+    {
+      "step_id": "S1-A01",
+      "screenshot": "../screenshots/aa/s1/gemini-web/01-open.png",
+      "problems": [
+        {
+          "what_happened": "The empty state shows no examples or capability entries; only a question and an input field, so nothing tells Kim what Gemini can do or that writing an email is supported.",
+          "severity": 1,
+          "guidelines": [
+            "G1"
+          ],
+          "evidence": "../screenshots/aa/s1/gemini-web/01-open.png",
+          "notes": ""
+        },
+        {
+          "what_happened": "The model selector is labelled 'Hydrogen', a name that gives Kim no idea what it changes or whether it matters for the task.",
+          "severity": 1,
+          "guidelines": [
+            "G1",
+            "G2"
+          ],
+          "evidence": "../screenshots/aa/s1/gemini-web/01-open.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Greeting 'Where should we start?', composer 'Ask Gemini', '+' button, model selector 'Hydrogen', voice. No example prompts, no capability entries. 'Get app' button top right."
+    },
+    {
+      "step_id": "S1-A05",
+      "screenshot": "../screenshots/aa/s1/gemini-web/02-prompt.png",
+      "problems": [],
+      "notes": "Request typed in the composer."
+    },
+    {
+      "step_id": "S1-A07",
+      "screenshot": "../screenshots/aa/s1/gemini-web/03-gmail-no.png",
+      "problems": [
+         {
+          "what_happened": "Gmail access was asked without specifying what task will be done.",
+          "severity": 2,
+          "guidelines": [
+            "G1",
+            "G2"
+          ],
+          "evidence": "../screenshots/aa/s1/gemini-web/03-gmail-no.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Asked for Gmail access."
+    },
+    {
+      "step_id": "S1-A08",
+      "screenshot": "../screenshots/aa/s1/gemini-web/04-gmail-declined.png",
+      "problems": [
+         {
+          "what_happened": "The chat does not continue for the the rest of the task.",
+          "severity": 2,
+          "guidelines": [
+            "G1",
+            "G2"
+          ],
+          "evidence": "../screenshots/aa/s1/gemini-web/04-gmail-declined.png",
+          "notes": ""
+        }
+      ],
+      "notes": "Gmail access denied by clicking on 'No thanks'."
+    },
+    {
+      "step_id": "S1-A09",
+      "screenshot": "../screenshots/aa/s1/gemini-web/05-rewirte-prompt.png",
+      "problems": [
+        {
+          "what_happened": "The chat does not continue for the the rest of the task. Had to rewrite prompt because it was not continuing after Gmail access denial.",
+          "severity": 2,
+          "guidelines": [
+            "G2",
+            "G16"
+          ],
+          "evidence": "../screenshots/aa/s1/gemini-web/04-gmail-declined.png",
+          "notes": ""
+        }
+      ],
+      "notes": " Had to rewrite prompt because it was not continuing after Gmail access denial."
+    },
+    {
+      "step_id": "S1-A10",
+      "screenshot": "../screenshots/gn/s1/gemini-web/06-response.png",
+      "problems": [],
+      "notes": "Direct email with Subject and placeholders."
+    },
+    {
+      "step_id": "S1-A11",
+      "screenshot": "../screenshots/gn/s1/gemini-web/07-response-bottom.png",
+      "problems": [],
+      "notes": "Usable with light editing: subject, formal, placeholders."
+    }
+  ]
 }
