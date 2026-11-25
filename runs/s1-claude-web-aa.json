@@ -47,7 +47,7 @@
           "guidelines": [
             "G16"
           ],
-          "evidence": "../screenshots/gn/s1/claude-web/04-response-bottom.png",
+          "evidence": "../screenshots/aa/s1/claude-web/04-response-bottom.png",
           "notes": ""
         }
       ],
@@ -55,7 +55,7 @@
     },
     {
       "step_id": "S1-A11",
-      "screenshot": "../screenshots/gn/s1/claude-web/04-response-bottom.png",
+      "screenshot": "../screenshots/aa/s1/claude-web/04-response-bottom.png",
       "problems": [],
       "notes": "Usable with light editing: subject, placeholders."
     }
