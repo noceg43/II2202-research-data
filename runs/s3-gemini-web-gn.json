@@ -66,18 +66,8 @@
     {
       "step_id": "S3-A09",
       "screenshot": "../screenshots/gn/s3/gemini-web/04-response.png",
-      "problems": [
-        {
-          "what_happened": "The departure city (Stockholm) was assumed without asking and without saying where it came from; it matches Kim's intent here, but Kim cannot tell whether it was a guess.",
-          "severity": 1,
-          "guidelines": [
-            "G12"
-          ],
-          "evidence": "../screenshots/gn/s3/gemini-web/04-response.png",
-          "notes": ""
-        }
-      ],
-      "notes": "'Here is a walkable, museum-free weekend itinerary for Gothenburg on November 21–22, 2026, tailored to a 5,000 SEK total budget (2,500 SEK per person x 2) covering trains, food, and activities'; Stockholm ↔ Gothenburg trains about 2,500 SEK for two; 'Accommodation is not factored into the 5,000 SEK'. Map panel with Stockholm C and Kungsparken (05-map-panel)."
+      "problems": [],
+      "notes": "'Here is a walkable, museum-free weekend itinerary for Gothenburg on November 21–22, 2026, tailored to a 5,000 SEK total budget (2,500 SEK per person x 2) covering trains, food, and activities'; Stockholm ↔ Gothenburg trains about 2,500 SEK for two; 'Accommodation is not factored into the 5,000 SEK'. Map panel with Stockholm C and Kungsparken (05-map-panel). The departure city (Stockholm) was assumed without asking; it matches the intended one."
     },
     {
       "step_id": "S3-A10",

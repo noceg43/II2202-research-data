@@ -23,25 +23,15 @@
       "problems": [
         {
           "what_happened": "None of the Write entries matches a personal formal email; the nearest, 'Draft email newsletters', points to a different kind of email and could lead Kim to an unintended template.",
-          "severity": 2,
+          "severity": 1,
           "guidelines": [
             "G4"
           ],
           "evidence": "../screenshots/gn/s1/claude-web/03-write-panel.png",
           "notes": ""
-        },
-        {
-          "what_happened": "The placeholder changes to 'Type / for skills' when the panel opens. 'Skills' and the '/' shortcut are not explained, so Kim cannot tell what the panel entries are or what typing '/' would do.",
-          "severity": 1,
-          "guidelines": [
-            "G1",
-            "G16"
-          ],
-          "evidence": "../screenshots/gn/s1/claude-web/03-write-panel.png",
-          "notes": ""
         }
       ],
-      "notes": "Hover state on 'Write' (02-write-hover); selecting it opens a panel 'Write' with five entries: Draft email newsletters, Edit my content, Create technical explanations, Create persuasive arguments, Create FAQ resources. Placeholder becomes 'Type / for skills'."
+      "notes": "Hover state on 'Write' (02-write-hover); selecting it opens a panel 'Write' with five entries: Draft email newsletters, Edit my content, Create technical explanations, Create persuasive arguments, Create FAQ resources. Placeholder becomes 'Type / for skills'. 'Skills' and the '/' shortcut are not explained."
     },
     {
       "step_id": "S1-A15",
@@ -76,18 +66,8 @@
     {
       "step_id": "S1-A10",
       "screenshot": "../screenshots/gn/s1/claude-web/06-response.png",
-      "problems": [
-        {
-          "what_happened": "'Send via Gmail' is offered on the card without saying whether it sends immediately, opens a draft, or requires connecting an account.",
-          "severity": 1,
-          "guidelines": [
-            "G16"
-          ],
-          "evidence": "../screenshots/gn/s1/claude-web/06-response.png",
-          "notes": ""
-        }
-      ],
-      "notes": "Email card with a 'Subject:' field, body, Copy and 'Send via Gmail' actions, then a short note: about 80 words, formal, has a subject line, replace the placeholders, consider adding the course code."
+      "problems": [],
+      "notes": "Email card with a 'Subject:' field, body, Copy and 'Send via Gmail' actions, then a short note: about 80 words, formal, has a subject line, replace the placeholders, consider adding the course code. 'Send via Gmail' does not say whether it sends at once, opens a draft or needs a connected account; it is an action button, not a prompt suggestion."
     },
     {
       "step_id": "S1-A11",

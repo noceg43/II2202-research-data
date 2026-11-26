@@ -23,19 +23,9 @@
           ],
           "evidence": "../screenshots/gn/s1/gemini-web/01-open.png",
           "notes": ""
-        },
-        {
-          "what_happened": "The model selector is labelled 'Hydrogen', a name that gives Kim no idea what it changes or whether it matters for the task.",
-          "severity": 1,
-          "guidelines": [
-            "G1",
-            "G2"
-          ],
-          "evidence": "../screenshots/gn/s1/gemini-web/01-open.png",
-          "notes": ""
         }
       ],
-      "notes": "Greeting 'Where should we start?', composer 'Ask Gemini', '+' button, model selector 'Hydrogen', voice. No example prompts, no capability entries. 'Get app' button top right."
+      "notes": "Greeting 'Where should we start?', composer 'Ask Gemini', '+' button, model selector 'Hydrogen', voice. No example prompts, no capability entries. 'Get app' button top right. The label 'Hydrogen' does not say what the selector changes."
     },
     {
       "step_id": "S1-A02",
@@ -82,18 +72,8 @@
     {
       "step_id": "S1-A11",
       "screenshot": "../screenshots/gn/s1/gemini-web/04-response-bottom.png",
-      "problems": [
-        {
-          "what_happened": "The follow-up actions 'Open in draft editor' and 'Open in Gmail' do not say what happens (new view? Gmail draft? account access?).",
-          "severity": 1,
-          "guidelines": [
-            "G16"
-          ],
-          "evidence": "../screenshots/gn/s1/gemini-web/04-response-bottom.png",
-          "notes": ""
-        }
-      ],
-      "notes": "Usable with light editing: subject, dates 20 -> 23 Nov, illness, doctor's note offered, formal, 'Sincerely, [Your Name]'. Below: 'How would you like to continue?' with 'Open in draft editor' and 'Open in Gmail'."
+      "problems": [],
+      "notes": "Usable with light editing: subject, dates 20 -> 23 Nov, illness, doctor's note offered, formal, 'Sincerely, [Your Name]'. Below: 'How would you like to continue?' with 'Open in draft editor' and 'Open in Gmail'. The two actions do not say what happens when selected; they are actions on the draft, not prompt suggestions."
     }
   ]
 }

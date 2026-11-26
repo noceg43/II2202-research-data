@@ -62,13 +62,13 @@
       "screenshot": "../screenshots/gn/s2/chatgpt-web/04-response.png",
       "problems": [
         {
-          "what_happened": "Selecting the suggestion sends a hidden prompt at once; Kim cannot see or edit it, cannot add the question about passing and deadlines, and the label does not say that the click sends.",
+          "what_happened": "Selecting the suggestion sends its own prompt at once. The label does not say that the click sends, the prompt is not shown beforehand, and Kim gets no chance to add the question about passing and deadlines.",
           "severity": 2,
           "guidelines": [
             "G16"
           ],
           "evidence": "../screenshots/gn/s2/chatgpt-web/04-response.png",
-          "notes": ""
+          "notes": "Consequence in this run: the answer is a study guide (S2-A13, 05-response-more.png); the pass requirements sit inside a long guide and deadlines are not addressed, because the sent prompt did not ask for them."
         }
       ],
       "notes": "Selecting 'Create a study guide' sends immediately the prompt 'Turn the uploaded content into a study guide with key concepts, concise explanations, examples, and review questions.' The prompt is not shown in the field before sending."
@@ -106,18 +106,7 @@
     {
       "step_id": "S2-A13",
       "screenshot": "../screenshots/gn/s2/chatgpt-web/05-response-more.png",
-      "problems": [
-        {
-          "what_happened": "The answer follows the suggestion's goal (a study guide with examples and review questions), not Kim's; pass requirements are buried in a long guide and deadlines are not addressed.",
-          "severity": 2,
-          "guidelines": [
-            "G4",
-            "G16"
-          ],
-          "evidence": "../screenshots/gn/s2/chatgpt-web/05-response-more.png",
-          "notes": ""
-        }
-      ],
+      "problems": [],
       "notes": "Assessment is covered ('One project assignment (PRO1), worth 7.5 credits, graded A-F (including FX)'). Deadlines are not addressed in the captured part, because the injected prompt did not ask for them."
     },
     {

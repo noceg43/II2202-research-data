@@ -8,7 +8,7 @@
     "product_version": "free plan, 'Model' selector default, Search mode on",
     "account_state": "logged_in",
     "interface_language": "en",
-    "notes": "Path S2-P3 (attach first, then type). While typing, the autocomplete entry 'summarize tool' was selected and the message sent with the file was 'summarize tool' instead of the prompt."
+    "notes": "Path S2-P3 (attach first, then type). While typing, the autocomplete entry 'summarize tool' was selected and the message sent with the file was 'summarize tool' instead of the prompt. Only 'summari' had been typed and no screenshot shows how the message was sent, so the replacement is not attributed to the suggestion."
   },
   "steps": [
     {
@@ -66,19 +66,8 @@
     {
       "step_id": "S2-A16",
       "screenshot": "../screenshots/gn/s2/perplexity-web/04-autocomplete-hover.png",
-      "problems": [
-        {
-          "what_happened": "Taking the completion 'summarize tool' replaced the request: the message that went out with the file was 'summarize tool', so the questions about passing and deadlines were never asked. Nothing warned that the completion would replace the intended prompt.",
-          "severity": 2,
-          "guidelines": [
-            "G16",
-            "G4"
-          ],
-          "evidence": "../screenshots/gn/s2/perplexity-web/05-response.png",
-          "notes": "No screenshot between the selection and the answer, so it is not visible whether the completion sent at once or after pressing send."
-        }
-      ],
-      "notes": "Completion 'summarize tool' selected."
+      "problems": [],
+      "notes": "Completion 'summarize tool' selected. Only 'summari' had been typed, and no screenshot was taken between the selection and the answer, so it is not recorded whether the completion sent at once or was sent with the send button. The message that went out was 'summarize tool'. Not logged as a problem because it cannot be pointed to on a screenshot."
     },
     {
       "step_id": "S2-A09",
@@ -101,18 +90,7 @@
     {
       "step_id": "S2-A11",
       "screenshot": "../screenshots/gn/s2/perplexity-web/05-response.png",
-      "problems": [
-        {
-          "what_happened": "After one upload a banner says the free-plan file upload limit is reached; it covers part of the answer and gives no prior warning that only one file could be uploaded.",
-          "severity": 1,
-          "guidelines": [
-            "G2",
-            "G16"
-          ],
-          "evidence": "../screenshots/gn/s2/perplexity-web/05-response.png",
-          "notes": ""
-        }
-      ],
+      "problems": [],
       "notes": "'Finished 3s' status; pending state not captured. Banner over the answer: 'You've reached the file upload limit on the Free plan' with an Upgrade button."
     },
     {

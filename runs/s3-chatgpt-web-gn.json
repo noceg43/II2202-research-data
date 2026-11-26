@@ -49,19 +49,8 @@
     {
       "step_id": "S3-A18",
       "screenshot": "../screenshots/gn/s3/chatgpt-web/04-think-on.png",
-      "problems": [
-        {
-          "what_happened": "The Think tooltip only says 'Get a smarter answer'; it does not say the answer will take much longer (43 s plus 8 min 57 s in this run).",
-          "severity": 1,
-          "guidelines": [
-            "G2",
-            "G16"
-          ],
-          "evidence": "../screenshots/gn/s3/chatgpt-web/03-think-hover.png",
-          "notes": ""
-        }
-      ],
-      "notes": "Hover on Think shows 'Get a smarter answer' (03-think-hover); Think switched on. Think is the only answer-quality control placed directly in the composer, so it is the one an ordinary user is likely to try."
+      "problems": [],
+      "notes": "Hover on Think shows 'Get a smarter answer' (03-think-hover); Think switched on. Think is the only answer-quality control placed directly in the composer, so it is the one an ordinary user is likely to try. The tooltip does not say that the answer takes much longer (43 s plus 8 min 57 s in this run)."
     },
     {
       "step_id": "S3-A06",
@@ -78,18 +67,8 @@
     {
       "step_id": "S3-A08",
       "screenshot": "../screenshots/gn/s3/chatgpt-web/06-planning.png",
-      "problems": [
-        {
-          "what_happened": "'Skip' next to the progress line does not say what is skipped (the thinking, the search, or the whole step) or what the answer loses.",
-          "severity": 1,
-          "guidelines": [
-            "G16"
-          ],
-          "evidence": "../screenshots/gn/s3/chatgpt-web/06-planning.png",
-          "notes": ""
-        }
-      ],
-      "notes": "'Planning a walking trip' with a 'Skip' link."
+      "problems": [],
+      "notes": "'Planning a walking trip' with a 'Skip' link. 'Skip' does not say what is skipped."
     },
     {
       "step_id": "S3-A09",
@@ -100,19 +79,8 @@
     {
       "step_id": "S3-A10",
       "screenshot": "../screenshots/gn/s3/chatgpt-web/07-origin-typed-while-working.png",
-      "problems": [
-        {
-          "what_happened": "The departure city (Jönköping) was assumed without asking and without saying where it came from. It was at least stated in the progress text, which let Kim correct it before the plan was written.",
-          "severity": 1,
-          "guidelines": [
-            "G12",
-            "G13"
-          ],
-          "evidence": "../screenshots/gn/s3/chatgpt-web/07-origin-typed-while-working.png",
-          "notes": ""
-        }
-      ],
-      "notes": "No plan to check yet; the stated assumption on the departure city is wrong, so a refinement is needed."
+      "problems": [],
+      "notes": "No plan to check yet; the stated assumption on the departure city is wrong, so a refinement is needed. The departure city (Jönköping) was assumed without asking and is stated in the progress text."
     },
     {
       "step_id": "S3-A11",

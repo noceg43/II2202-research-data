@@ -32,7 +32,7 @@
           "severity": 1,
           "guidelines": [
             "G4",
-            "G3"
+            "G12"
           ],
           "evidence": "../screenshots/gn/s2/claude-web/02-file-attached.png",
           "notes": ""

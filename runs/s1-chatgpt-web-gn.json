@@ -39,7 +39,7 @@
       "problems": [
         {
           "what_happened": "No submenu entry matches the email task (Summarize a passage / Rewrite for clarity / Polish a message); Kim has to pick a near-match that is about rewriting existing text, not writing a new email.",
-          "severity": 2,
+          "severity": 1,
           "guidelines": [
             "G4",
             "G1"
@@ -48,41 +48,21 @@
           "notes": ""
         },
         {
-          "what_happened": "The submenu entries change between sessions: on 2026-11-02 'Turn notes into an email' was offered, in this run it is not. A user cannot rely on finding the same entry again.",
-          "severity": 1,
-          "guidelines": [
-            "G14"
-          ],
-          "evidence": "../screenshots/gn/s1/chatgpt-web/03-submenu.png",
-          "notes": "Earlier set: 2026-11-02 run, ok-test/hta/evidence/S1/shots/03-submenu-turn-notes-into-email.png."
-        },
-        {
           "what_happened": "The entry labels do not say that selecting one inserts an instruction into the composer; the consequence is only visible after the click.",
-          "severity": 1,
+          "severity": 2,
           "guidelines": [
             "G16"
           ],
           "evidence": "../screenshots/gn/s1/chatgpt-web/04-template-injected.png",
-          "notes": ""
+          "notes": "Consequence if Kim takes the nearest entry ('Rewrite for clarity'): the inserted instruction asks to rewrite 'my text' while Kim's text is a request to write a new email, so the combined prompt contradicts itself (05-prompt-filled.png)."
         }
       ],
-      "notes": "Submenu: Summarize a passage, Rewrite for clarity, Polish a message. None is about writing a new email; 'Rewrite for clarity' was selected as the closest."
+      "notes": "Submenu: Summarize a passage, Rewrite for clarity, Polish a message. None is about writing a new email; 'Rewrite for clarity' was selected as the closest. The entries differ from the 2026-11-02 trial run, where 'Turn notes into an email' was offered (ok-test/hta/evidence/S1/shots/03-submenu-turn-notes-into-email.png)."
     },
     {
       "step_id": "S1-A14",
       "screenshot": "../screenshots/gn/s1/chatgpt-web/05-prompt-filled.png",
-      "problems": [
-        {
-          "what_happened": "The injected instruction asks to rewrite 'my text' for clarity, while Kim's text is a request to write a new formal email. The combined prompt contradicts itself and nothing shows which part the model will follow.",
-          "severity": 2,
-          "guidelines": [
-            "G16",
-            "G2"
-          ],
-          "evidence": "../screenshots/gn/s1/chatgpt-web/05-prompt-filled.png",
-          "notes": ""
-        }
-      ],
+      "problems": [],
       "notes": "Template injected: 'Rewrite my text so it feels clearer, cleaner, and easier to read. Here is my text:' (04-template-injected); the request appended after it."
     },
     {

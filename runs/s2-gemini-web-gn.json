@@ -91,18 +91,8 @@
     {
       "step_id": "S2-A12",
       "screenshot": "../screenshots/gn/s2/gemini-web/04-response.png",
-      "problems": [
-        {
-          "what_happened": "Citation chips read 'ii2202-syllabus.pdf + 2' although only one file was given; it is not clear what the '+ 2' refers to or how far the sources can be trusted.",
-          "severity": 1,
-          "guidelines": [
-            "G2"
-          ],
-          "evidence": "../screenshots/gn/s2/gemini-web/04-response.png",
-          "notes": ""
-        }
-      ],
-      "notes": "Intro sentence, 'What You Need to Pass' (PRO1, four deliverables, mandatory attendance, oral and ethical requirements), 'Deadlines'. Every claim carries a citation chip."
+      "problems": [],
+      "notes": "Intro sentence, 'What You Need to Pass' (PRO1, four deliverables, mandatory attendance, oral and ethical requirements), 'Deadlines'. Every claim carries a citation chip. Some chips read 'ii2202-syllabus.pdf + 2' although only one file was given."
     },
     {
       "step_id": "S2-A13",

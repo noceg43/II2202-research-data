@@ -79,18 +79,7 @@
     {
       "step_id": "S3-A10",
       "screenshot": "../screenshots/gn/s3/claude-web/07-response-bottom.png",
-      "problems": [
-        {
-          "what_happened": "The departure city (Jönköping) was assumed without asking and without saying where it came from; Kim has to notice it inside the plan and correct it.",
-          "severity": 2,
-          "guidelines": [
-            "G12",
-            "G13"
-          ],
-          "evidence": "../screenshots/gn/s3/claude-web/06-response.png",
-          "notes": ""
-        }
-      ],
+      "problems": [],
       "notes": "Both days with times and costs; budget table total 2,440, buffer 60. Walking and no museums covered; budget read as total; departure city assumed; no night's stay. 'Create a spreadsheet' chip under the answer."
     },
     {

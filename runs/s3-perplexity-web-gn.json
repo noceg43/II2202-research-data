@@ -19,8 +19,7 @@
           "what_happened": "The only content under the composer is an onboarding checklist for the Computer agent; nothing shows what can be asked or that trips can be planned.",
           "severity": 1,
           "guidelines": [
-            "G1",
-            "G3"
+            "G1"
           ],
           "evidence": "../screenshots/gn/s3/perplexity-web/01-open.png",
           "notes": ""
@@ -45,7 +44,7 @@
       "screenshot": "../screenshots/gn/s3/perplexity-web/02-typing-autocomplete.png",
       "problems": [
         {
-          "what_happened": "Completions include places and words that do not fit the request ('gothenburg netherlands', 'gothenburg poland', 'goths', 'goth road'); they are web-search completions, not trip-planning suggestions.",
+          "what_happened": "Besides 'gothenburg sweden' and 'gothenburg', the completions include places and words that do not fit the request ('gothenburg netherlands', 'gothenburg poland', 'goths', 'goth road'); they are web-search completions, not trip-planning suggestions.",
           "severity": 1,
           "guidelines": [
             "G4"
@@ -67,7 +66,7 @@
             "G16"
           ],
           "evidence": "../screenshots/gn/s3/perplexity-web/04-response.png",
-          "notes": ""
+          "notes": "Not recorded whether the row or the arrow at its right was clicked; in the S1 run a completion filled the field without sending."
         }
       ],
       "notes": "Completion 'plan a trip to gothenburg sweden' selected (arrow at the right of the hovered row)."
@@ -108,7 +107,7 @@
             "G16"
           ],
           "evidence": "../screenshots/gn/s3/perplexity-web/05-response-bottom.png",
-          "notes": ""
+          "notes": "Consequences in this run after 'We are a couple traveling on a mid-range budget' was selected: a banner offers 'Get weekly Gothenburg trip ideas for couples' (07-couple-response.png), and later follow-ups assume a partner ('Email this budget workbook to my partner', 33-itinerary-response-bottom.png)."
         }
       ],
       "notes": "Incomplete: 3 days instead of 2, Day 2 morning is 'Gothenburg Museum of Art or City Museum', no dates, budget or costs. The answer asks for departure city, dates, travellers and budget. Follow-ups: one Computer task ('Day-by-day Gothenburg travel itinerary…') and four chips: 'I'm flying from London in July for 3 days', 'We are a couple traveling on a mid-range budget', 'Show me the best family-friendly hotels in the centre', 'What is the public transit app I need to download'."
@@ -128,18 +127,7 @@
     {
       "step_id": "S3-A13",
       "screenshot": "../screenshots/gn/s3/perplexity-web/07-couple-response.png",
-      "problems": [
-        {
-          "what_happened": "Right after the first follow-up, a banner offers to set up a weekly scheduled task ('Get weekly Gothenburg trip ideas for couples'); it overlays the answer and is built on the 'couple' assumption from the chip.",
-          "severity": 1,
-          "guidelines": [
-            "G3",
-            "G14"
-          ],
-          "evidence": "../screenshots/gn/s3/perplexity-web/07-couple-response.png",
-          "notes": ""
-        }
-      ],
+      "problems": [],
       "notes": "'Finished 1s'; SEK 2,500–3,500 per day for two, 'Recommended stay: Book a 3-night stay…'. A banner 'Get weekly Gothenburg trip ideas for couples – Set up' sits over the answer."
     },
     {
@@ -201,11 +189,11 @@
       "screenshot": "../screenshots/gn/s3/perplexity-web/15-computer-suggestion-hover.png",
       "problems": [
         {
-          "what_happened": "Selecting the Computer suggestion leaves the thread for a separate Computer page with a long generated prompt already in the field ('couples trip', SJ vs FlixBus, Liseberg entry 125 SEK, costs in SEK and USD). The suggestion label does not say it switches mode or writes a new request with content Kim never gave.",
+          "what_happened": "The Computer suggestion leaves the thread for a separate Computer page and fills the field with a long generated prompt ('couples trip', SJ vs FlixBus, Liseberg entry 125 SEK, costs in SEK and USD) that contains content Kim never gave. A 'Computer' tag is shown next to the suggestion and the prompt can be edited before sending, but nothing explains what Computer is or that the task runs for minutes (11 min 18 s in this run) rather than seconds.",
           "severity": 2,
           "guidelines": [
             "G16",
-            "G14"
+            "G2"
           ],
           "evidence": "../screenshots/gn/s3/perplexity-web/16-computer-prompt-prefilled.png",
           "notes": ""
@@ -264,33 +252,13 @@
     {
       "step_id": "S3-A13",
       "screenshot": "../screenshots/gn/s3/perplexity-web/24-computer-working-5.png",
-      "problems": [
-        {
-          "what_happened": "The suggestion started an agent run of 11 min 18 s; nothing before sending said it would take minutes rather than seconds.",
-          "severity": 1,
-          "guidelines": [
-            "G2"
-          ],
-          "evidence": "../screenshots/gn/s3/perplexity-web/24-computer-working-5.png",
-          "notes": ""
-        }
-      ],
+      "problems": [],
       "notes": "'Working 10m 34s'; 'Reading: shop.flixbus.se'."
     },
     {
       "step_id": "S3-A13",
       "screenshot": "../screenshots/gn/s3/perplexity-web/25-computer-response.png",
-      "problems": [
-        {
-          "what_happened": "A promotional banner for Microsoft 365 with Computer covers part of the answer; later a 'Turn on notifications – Notify' banner does the same.",
-          "severity": 1,
-          "guidelines": [
-            "G3"
-          ],
-          "evidence": "../screenshots/gn/s3/perplexity-web/25-computer-response.png",
-          "notes": ""
-        }
-      ],
+      "problems": [],
       "notes": "'Finished 11m 18s'; 'Stockholm to Gothenburg weekend budget': SJ 3,380 SEK transport / 7,022 SEK total, FlixBus 6,049 SEK; Artefacts 1. A banner 'Create, edit, and analyse your document directly in Microsoft 365 with Computer – Get Started' covers part of the answer."
     },
     {
@@ -338,18 +306,7 @@
     {
       "step_id": "S3-A10",
       "screenshot": "../screenshots/gn/s3/perplexity-web/33-itinerary-response-bottom.png",
-      "problems": [
-        {
-          "what_happened": "Follow-ups ('Email this budget workbook to my partner', 'Email the itinerary… to my travel partner') assume a partner, carried over from the 'couple' chip Kim picked as a near-match.",
-          "severity": 1,
-          "guidelines": [
-            "G13",
-            "G14"
-          ],
-          "evidence": "../screenshots/gn/s3/perplexity-web/33-itinerary-response-bottom.png",
-          "notes": ""
-        }
-      ],
+      "problems": [],
       "notes": "Follow-ups: 'Create a Project from this session…', 'Add a packing list…', 'Email the itinerary and budget workbook to my travel partner'."
     },
     {

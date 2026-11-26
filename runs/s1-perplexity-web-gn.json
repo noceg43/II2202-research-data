@@ -23,18 +23,9 @@
           ],
           "evidence": "../screenshots/gn/s1/perplexity-web/01-open.png",
           "notes": ""
-        },
-        {
-          "what_happened": "The only hint in the composer, 'Type @ for connectors', uses a term Kim does not know and says nothing about what can be asked.",
-          "severity": 1,
-          "guidelines": [
-            "G1"
-          ],
-          "evidence": "../screenshots/gn/s1/perplexity-web/01-open.png",
-          "notes": ""
         }
       ],
-      "notes": "Heading 'What do you want to know?', composer placeholder 'Type @ for connectors', Search / Computer switch (Search selected), 'Model' selector, voice. No examples, no capability entries. 'Free plan - Upgrade' badge."
+      "notes": "Heading 'What do you want to know?', composer placeholder 'Type @ for connectors', Search / Computer switch (Search selected), 'Model' selector, voice. No examples, no capability entries. 'Free plan - Upgrade' badge. 'Connectors' is not explained."
     },
     {
       "step_id": "S1-A02",
@@ -53,11 +44,10 @@
       "screenshot": "../screenshots/gn/s1/perplexity-web/06-prompt-filled.png",
       "problems": [
         {
-          "what_happened": "Autocomplete offers web-search completions of Kim's personal request ('my station', 'static website', 'statistics club'); they are unrelated to the task and cover the area under the composer while typing.",
-          "severity": 2,
+          "what_happened": "Autocomplete offers web-search completions of Kim's personal request ('my station', 'static', 'static website'); one of the four ('statistics') fits the sentence, the others are unrelated to the task.",
+          "severity": 1,
           "guidelines": [
-            "G4",
-            "G3"
+            "G4"
           ],
           "evidence": "../screenshots/gn/s1/perplexity-web/02-typing-autocomplete.png",
           "notes": ""
@@ -96,19 +86,8 @@
     {
       "step_id": "S1-A09",
       "screenshot": "../screenshots/gn/s1/perplexity-web/07-response.png",
-      "problems": [
-        {
-          "what_happened": "A banner 'Pro - Free preview of advanced search enabled' appears under the answer: a mode was switched on without Kim asking, and it is not clear what it changed in this answer.",
-          "severity": 1,
-          "guidelines": [
-            "G14",
-            "G16"
-          ],
-          "evidence": "../screenshots/gn/s1/perplexity-web/07-response.png",
-          "notes": ""
-        }
-      ],
-      "notes": "'Finished 1s' status above the answer; pending state not captured."
+      "problems": [],
+      "notes": "'Finished 1s' status above the answer; pending state not captured. A banner 'Pro - Free preview of advanced search enabled' appears under the answer."
     },
     {
       "step_id": "S1-A10",
